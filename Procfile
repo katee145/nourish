@@ -1,1 +1,1 @@
-web: gunicorn nourish.wsgi
+web: gunicorn config.wsgi
