@@ -2,6 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+
+STATUS = (
+    (0, 'Draft'), 
+    (1, 'Published'),
+) 
+
 class Recipe(models.Model):
     """
     Model for recipe.
@@ -11,12 +17,41 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="recipes"
     )
-    description = models.TextField()
-    instructions = models.TextField()
+    ingredients = models.ManyToManyField('Ingredient', blank=True)  # This line defines the ManyToManyField
     cooking_time = models.IntegerField(default=0)
     prep_time = models.IntegerField(default=0)
     servings = models.PositiveIntegerField(default=1)
+    description = models.TextField()
+    instructions = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
         return self.title
+
+class Ingredient(models.Model):
+    """
+    Model representing a recipe ingredient.
+    """
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="ingredients")
+    name = models.CharField(max_length=255)
+    quantity = models.CharField(max_length=50, blank=True)
+    unit = models.CharField(max_length=50, blank=True)
+
+    def __str__(self):
+        return f"{self.quantity} {self.unit} {self.name}"
+
+class Category(models.Model):
+    """
+    Model representing a recipe category.
+    """
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+class RecipeCategory(models.Model):
+    """
+    Many-to-many relationship between Recipe and Category.
+    """
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
