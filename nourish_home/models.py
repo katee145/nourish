@@ -17,7 +17,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="recipes"
     )
-    ingredients = models.ManyToManyField('Ingredient', blank=True)  # This line defines the ManyToManyField
+    ingredients = models.ManyToManyField('Ingredient', related_name='recipes', blank=True)  # Added related_name here
     cooking_time = models.IntegerField(default=0)
     prep_time = models.IntegerField(default=0)
     servings = models.PositiveIntegerField(default=1)
@@ -32,7 +32,7 @@ class Ingredient(models.Model):
     """
     Model representing a recipe ingredient.
     """
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="ingredients")
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="ingredient_set")  # Changed related_name here
     name = models.CharField(max_length=255)
     quantity = models.CharField(max_length=50, blank=True)
     unit = models.CharField(max_length=50, blank=True)
