@@ -1,0 +1,122 @@
+[
+    {
+      "model": "nourish_home.recipe",
+      "fields": {
+        "title": "Roasted White Bean and Pea Pesto Bowl",
+        "slug": "roasted-white-bean-pea-pesto-bowl",
+        "author": 1,
+        "cooking_time": 25,
+        "prep_time": 15,
+        "servings": 2,
+        "description": "A nourishing bowl with roasted white beans, pine nuts, fresh tomatoes, hummus, and a vibrant pea pesto.",
+        "instructions": "1. Roast the white beans with olive oil and seasoning. 2. Blend peas, garlic, lemon juice, and olive oil for the pesto. 3. Assemble with tomatoes, pine nuts, hummus, and pesto.",
+        "status": 1
+      }
+    },
+    {
+      "model": "nourish_home.ingredient",
+      "fields": {
+        "recipe": 1,
+        "name": "White Beans",
+        "quantity": "200",
+        "unit": "grams"
+      }
+    },
+    {
+      "model": "nourish_home.ingredient",
+      "fields": {
+        "recipe": 1,
+        "name": "Peas",
+        "quantity": "100",
+        "unit": "grams"
+      }
+    },
+    {
+      "model": "nourish_home.category",
+      "fields": {
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "model": "nourish_home.recipecategory",
+      "fields": {
+        "recipe": 1,
+        "category": 1
+      }
+    },
+    {
+      "model": "nourish_home.recipe",
+      "fields": {
+        "title": "Asian Cabbage and Tomato Stir-fry",
+        "slug": "asian-cabbage-tomato-stir-fry",
+        "author": 1,
+        "cooking_time": 20,
+        "prep_time": 10,
+        "servings": 2,
+        "description": "A flavorful Asian stir-fry with cabbage, tomato seasoning, topped with pistachios and almonds.",
+        "instructions": "1. Stir-fry cabbage with tomato paste and soy sauce. 2. Top with roasted pistachios and almonds.",
+        "status": 1
+      }
+    },
+    {
+      "model": "nourish_home.ingredient",
+      "fields": {
+        "recipe": 2,
+        "name": "Cabbage",
+        "quantity": "300",
+        "unit": "grams"
+      }
+    },
+    {
+      "model": "nourish_home.ingredient",
+      "fields": {
+        "recipe": 2,
+        "name": "Tomato Paste",
+        "quantity": "2",
+        "unit": "tablespoons"
+      }
+    },
+    {
+      "model": "nourish_home.recipe",
+      "fields": {
+        "title": "Baked Eggs with Greens",
+        "slug": "baked-eggs-greens",
+        "author": 1,
+        "cooking_time": 30,
+        "prep_time": 10,
+        "servings": 2,
+        "description": "A hearty baked egg dish filled with greens, perfect for serving with toast.",
+        "instructions": "1. Saute greens. 2. Crack eggs into a baking dish. 3. Bake until eggs are set. Serve with toast.",
+        "status": 1
+      }
+    },
+    {
+      "model": "nourish_home.recipe",
+      "fields": {
+        "title": "Mediterranean Chickpea Bowl",
+        "slug": "mediterranean-chickpea-bowl",
+        "author": 1,
+        "cooking_time": 20,
+        "prep_time": 15,
+        "servings": 2,
+        "description": "A bowl with roasted chickpeas, pitta bread, figs, edamame, olive salad, cucumber, and yoghurt.",
+        "instructions": "1. Roast chickpeas. 2. Prepare salad and slice figs. 3. Assemble bowl with pita and yoghurt drizzle.",
+        "status": 1
+      }
+    },
+    {
+      "model": "nourish_home.recipe",
+      "fields": {
+        "title": "Healthy Yellow Chicken Curry",
+        "slug": "yellow-chicken-curry",
+        "author": 1,
+        "cooking_time": 45,
+        "prep_time": 15,
+        "servings": 4,
+        "description": "A healthy, fragrant yellow chicken curry served with rice.",
+        "instructions": "1. Saute onions and spices. 2. Add chicken. 3. Simmer with coconut milk until cooked.",
+        "status": 1
+      }
+    }
+  ]
+  
