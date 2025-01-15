@@ -6,4 +6,5 @@ from .models import Recipe
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1)
-    template_name = "recipe_list.html"
+    template_name = "nourish_home/index.html"
+    #paginate_by = 6
