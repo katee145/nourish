@@ -8,6 +8,7 @@ STATUS = (
     (1, 'Published'),
 ) 
 
+
 class Recipe(models.Model):
     """
     Model for recipe.
@@ -28,6 +29,7 @@ class Recipe(models.Model):
     def __str__(self):
         return self.title
 
+
 class Ingredient(models.Model):
     """
     Model representing a recipe ingredient.
@@ -40,6 +42,7 @@ class Ingredient(models.Model):
     def __str__(self):
         return f"{self.quantity} {self.unit} {self.name}"
 
+
 class Category(models.Model):
     """
     Model representing a recipe category.
@@ -49,9 +52,31 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class RecipeCategory(models.Model):
     """
     Many-to-many relationship between Recipe and Category.
     """
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+
+
+class Comment(models.Model):
+    """
+    Model for comments.
+    """
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}"
+
+
