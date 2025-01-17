@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <!-- Recipe title -->
+                <h1 class="post-title">{{ recipe.title }}</h1>
+                <!-- Author and created date (assuming creation date is available) -->
+                <p class="post-subtitle">{{ recipe.author }} <!--| {{ recipe.created_on }}--></p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                <img src="{% static 'images/default_recipe.jpg' %}" class="scale" alt="Recipe image placeholder">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body">
+                <!-- Recipe description -->
+                <h2>Description</h2>
+                <p class="card-text">{{ recipe.description | safe }}</p>
+                
+                <!-- Recipe details -->
+                <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
+                <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} mins</p>
+                <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+
+                <!-- Ingredients list -->
+                <h2>Ingredients</h2>
+                <ul>
+                    {% for ingredient in recipe.ingredient_set.all %}
+                        <li>{{ ingredient.quantity }} {{ ingredient.unit }} {{ ingredient.name }}</li>
+                    {% endfor %}
+                </ul>
+
+                <!-- Instructions -->
+                <h2>Instructions</h2>
+                <p class="card-text">{{ recipe.instructions | safe }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments section -->
+    <div class="row">
+        <div class="col card mb-4 left top">
+            <div class="card-body">
+                <h2>Comments</h2>
+                {% for comment in comments %}
+                    <p><strong>{{ comment.author.username }}:</strong> {{ comment.body }}</p>
+                {% empty %}
+                    <p>No comments yet.</p>
+                {% endfor %}
+                {% if user.is_authenticated %}
+                    <h3>Add a Comment</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ comment_form.as_p }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                {% else %}
+                    <p><a href="{% url 'login' %}">Log in</a> to post a comment.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
