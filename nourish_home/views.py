@@ -26,18 +26,34 @@ class RecipeDetailView(View):
             "comment_form": comment_form,
         })
 
+    # def post(self, request, slug, *args, **kwargs):
+    #     recipe = get_object_or_404(Recipe, slug=slug, status=1)
+    #     comments = recipe.comments.filter(approved=True).order_by('created_on')
+    #     comment_form = CommentForm(data=request.POST)
+    #     if comment_form.is_valid():
+    #         comment = comment_form.save(commit=False)
+    #         comment.recipe = recipe
+    #         comment.author = request.user
+    #         comment.save()
+    #         return redirect("recipe_detail", slug=recipe.slug)
+    #     return render(request, "recipe_detail.html", {
+    #         "recipe": recipe,
+    #         "comments": comments,
+    #         "comment_form": comment_form,
+    #     })
+
     def post(self, request, slug, *args, **kwargs):
         recipe = get_object_or_404(Recipe, slug=slug, status=1)
-        comments = recipe.comments.filter(approved=True).order_by('created_on')
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.recipe = recipe
-            comment.author = request.user
-            comment.save()
-            return redirect("recipe_detail", slug=recipe.slug)
+        if request.method == "POST":
+            comment_form = CommentForm(data=request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.author = request.user
+                comment.recipe = recipe
+                comment.save()
+                return redirect("recipe_detail", slug=recipe.slug)
         return render(request, "recipe_detail.html", {
             "recipe": recipe,
-            "comments": comments,
+            "comments": recipe.comments.filter(approved=True).order_by('created_on'),
             "comment_form": comment_form,
         })
