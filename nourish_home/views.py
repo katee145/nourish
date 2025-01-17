@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
 from django.views import generic
+from django.contrib import messages
 from .models import Recipe
 from .forms import CommentForm
 
@@ -51,6 +52,10 @@ class RecipeDetailView(View):
                 comment.author = request.user
                 comment.recipe = recipe
                 comment.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Comment submitted and awaiting approval'
+                )
                 return redirect("recipe_detail", slug=recipe.slug)
         return render(request, "recipe_detail.html", {
             "recipe": recipe,
