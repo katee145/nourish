@@ -13,3 +13,19 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 # Register your models here.
 admin.site.register(Comment)
+
+# Customizing Comment Admin to display additional information and provide more control
+# @admin.register(Comment)
+# class CommentAdmin(admin.ModelAdmin):
+#     list_display = ('recipe', 'author', 'created_on', 'approved')
+#     search_fields = ['author__username', 'body']
+#     list_filter = ('approved', 'created_on')
+#     actions = ['approve_comments', 'disapprove_comments']
+
+#     def approve_comments(self, request, queryset):
+#         queryset.update(approved=True)
+#     approve_comments.short_description = 'Approve selected comments'
+
+#     def disapprove_comments(self, request, queryset):
+#         queryset.update(approved=False)
+#     disapprove_comments.short_description = 'Disapprove selected comments'
