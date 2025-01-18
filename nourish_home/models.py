@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -18,6 +19,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="recipes"
     )
+    featured_image = CloudinaryField('image', default='placeholder')
     ingredients = models.ManyToManyField('Ingredient', related_name='recipes', blank=True)  # Added related_name here
     cooking_time = models.IntegerField(default=0)
     prep_time = models.IntegerField(default=0)
