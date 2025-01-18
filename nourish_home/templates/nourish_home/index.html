@@ -20,9 +20,9 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
                                 {% endif %}
-                                <div class="image-flash">
+                                <!--<div class="image-flash">
                                     <p class="author">Author: {{ recipe.author }}</p>
-                                </div>
+                                </div> -->
                             </div>
                             <h2 class="card-title">
                                 <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link">

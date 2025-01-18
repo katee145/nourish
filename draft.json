@@ -49,6 +49,7 @@
         "categories": [
             {"name": "Under 30 mins"},
             {"name": "Breakfast"},
+            {"name": "Budget eats"},
             {"name": "Vegetarian"}
         ]
     },
@@ -84,6 +85,7 @@
             {"name": "Under 30 mins"},
             {"name": "Lunch"},
             {"name": "Vegan"},
+            {"name": "Budget eats"},
             {"name": "Gluten Free"}
         ]
     },
@@ -119,6 +121,7 @@
         "categories": [
             {"name": "Dinner"},
             {"name": "Gluten Free"},
+            {"name": "Budget eats"},
             {"name": "Meat"}
         ]
     },
@@ -284,6 +287,7 @@
             {"name": "Breakfast"},
             {"name": "Lunch"},
             {"name": "Vegetarian"},
+            {"name": "Budget eats"},
             {"name": "Gluten Free"}
         ]
     },
@@ -313,6 +317,7 @@
             {"name": "Under 15 mins"},
             {"name": "Breakfast"},
             {"name": "Protein-focused"},
+            {"name": "Budget eats"},
             {"name": "Vegetarian"}
         ]
     },
@@ -450,6 +455,7 @@
             {"name": "Dinner"},
             {"name": "Vegan"},
             {"name": "Gluten free"},
+            {"name": "Budget eats"},
             {"name": "Protein-focused"}
         ]
     },
@@ -550,6 +556,7 @@
             {"name": "Dinner"},
             {"name": "Vegan"},
             {"name": "Gluten free"},
+            {"name": "Budget eats"},
             {"name": "Protein-focused"}
         ]
     },
@@ -616,6 +623,7 @@
             {"name": "Dinner"},
             {"name": "Vegan"},
             {"name": "Gluten free"},
+            {"name": "Budget eats"},
             {"name": "Prepare ahead"}
         ]
     },
@@ -651,6 +659,7 @@
             {"name": "Dinner"},
             {"name": "Vegan"},
             {"name": "Gluten free"},
+            {"name": "Budget eats"},
             {"name": "Protein-focused"}
         ]
     },
@@ -691,6 +700,7 @@
             {"name": "Dinner"},
             {"name": "Vegetarian"},
             {"name": "Vegan"},
+            {"name": "Budget eats"},
             {"name": "Wow your guests"}
         ]
     },
@@ -727,6 +737,7 @@
             {"name": "Dinner"},
             {"name": "Vegan"},
             {"name": "Gluten free"},
+            {"name": "Budget eats"},
             {"name": "Protein-focused"}
         ]
     },
@@ -916,6 +927,7 @@
             {"name": "Dinner"},
             {"name": "Vegetarian"},
             {"name": "Vegan"},
+            {"name": "Budget eats"},
             {"name": "Gluten free"}
         ]
     },
@@ -1054,6 +1066,7 @@
             {"name": "Dinner"},
             {"name": "Vegetarian"},
             {"name": "Vegan"},
+            {"name": "Budget eats"},
             {"name": "Gluten free"}
         ]
     },
