@@ -13,7 +13,12 @@
                 <p class="post-subtitle">{{ recipe.author }} <!--| {{ recipe.created_on }}--></p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/default_recipe.jpg' %}" class="scale" alt="Recipe image placeholder">
+                <!--<img src="{% static 'images/default_recipe.jpg' %}" class="scale" alt="Recipe image placeholder">-->
+                {% if "placeholder" in recipe.featured_image.url %}
+                <img src="{% static 'images/placeholder.jpg' %}" class="scale" alt="placeholder image">
+                {% else %}
+                <img src="{{ recipe.featured_image.url }}" class="scale" alt="{{ recipe.title }}">
+                {% endif %}
             </div>
         </div>
     </div>
