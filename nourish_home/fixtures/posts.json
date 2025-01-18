@@ -1,122 +1,55 @@
 [
-    {
-      "model": "nourish_home.recipe",
-      "fields": {
-        "title": "Roasted White Bean and Pea Pesto Bowl",
-        "slug": "roasted-white-bean-pea-pesto-bowl",
-        "author": 1,
-        "cooking_time": 25,
-        "prep_time": 15,
-        "servings": 2,
-        "description": "A nourishing bowl with roasted white beans, pine nuts, fresh tomatoes, hummus, and a vibrant pea pesto.",
-        "instructions": "1. Roast the white beans with olive oil and seasoning. 2. Blend peas, garlic, lemon juice, and olive oil for the pesto. 3. Assemble with tomatoes, pine nuts, hummus, and pesto.",
-        "status": 1
-      }
-    },
-    {
-      "model": "nourish_home.ingredient",
-      "fields": {
-        "recipe": 1,
-        "name": "White Beans",
-        "quantity": "200",
-        "unit": "grams"
-      }
-    },
-    {
-      "model": "nourish_home.ingredient",
-      "fields": {
-        "recipe": 1,
-        "name": "Peas",
-        "quantity": "100",
-        "unit": "grams"
-      }
-    },
-    {
-      "model": "nourish_home.category",
-      "fields": {
-        "name": "Vegetarian"
-      }
-    },
-    {
-      "model": "nourish_home.recipecategory",
-      "fields": {
-        "recipe": 1,
-        "category": 1
-      }
-    },
-    {
-      "model": "nourish_home.recipe",
-      "fields": {
-        "title": "Asian Cabbage and Tomato Stir-fry",
-        "slug": "asian-cabbage-tomato-stir-fry",
-        "author": 1,
-        "cooking_time": 20,
-        "prep_time": 10,
-        "servings": 2,
-        "description": "A flavorful Asian stir-fry with cabbage, tomato seasoning, topped with pistachios and almonds.",
-        "instructions": "1. Stir-fry cabbage with tomato paste and soy sauce. 2. Top with roasted pistachios and almonds.",
-        "status": 1
-      }
-    },
-    {
-      "model": "nourish_home.ingredient",
-      "fields": {
-        "recipe": 2,
-        "name": "Cabbage",
-        "quantity": "300",
-        "unit": "grams"
-      }
-    },
-    {
-      "model": "nourish_home.ingredient",
-      "fields": {
-        "recipe": 2,
-        "name": "Tomato Paste",
-        "quantity": "2",
-        "unit": "tablespoons"
-      }
-    },
-    {
-      "model": "nourish_home.recipe",
-      "fields": {
-        "title": "Baked Eggs with Greens",
-        "slug": "baked-eggs-greens",
-        "author": 1,
-        "cooking_time": 30,
-        "prep_time": 10,
-        "servings": 2,
-        "description": "A hearty baked egg dish filled with greens, perfect for serving with toast.",
-        "instructions": "1. Saute greens. 2. Crack eggs into a baking dish. 3. Bake until eggs are set. Serve with toast.",
-        "status": 1
-      }
-    },
-    {
-      "model": "nourish_home.recipe",
-      "fields": {
-        "title": "Mediterranean Chickpea Bowl",
-        "slug": "mediterranean-chickpea-bowl",
-        "author": 1,
-        "cooking_time": 20,
-        "prep_time": 15,
-        "servings": 2,
-        "description": "A bowl with roasted chickpeas, pitta bread, figs, edamame, olive salad, cucumber, and yoghurt.",
-        "instructions": "1. Roast chickpeas. 2. Prepare salad and slice figs. 3. Assemble bowl with pita and yoghurt drizzle.",
-        "status": 1
-      }
-    },
-    {
-      "model": "nourish_home.recipe",
-      "fields": {
-        "title": "Healthy Yellow Chicken Curry",
-        "slug": "yellow-chicken-curry",
-        "author": 1,
-        "cooking_time": 45,
-        "prep_time": 15,
-        "servings": 4,
-        "description": "A healthy, fragrant yellow chicken curry served with rice.",
-        "instructions": "1. Saute onions and spices. 2. Add chicken. 3. Simmer with coconut milk until cooked.",
-        "status": 1
-      }
-    }
-  ]
-  
+  {
+      "title": "Mediterranean Mezze Feast Bowl",
+      "slug": "mediterranean-mezze-feast-bowl",
+      "author": 1,
+      "featured_image": "image_url_here",
+      "ingredients": [
+          {"name": "Cucumber", "quantity": "1", "unit": "large"},
+          {"name": "Tomatoes", "quantity": "2", "unit": "medium"},
+          {"name": "Red Onion", "quantity": "1", "unit": "small"},
+          {"name": "Feta Cheese", "quantity": "100", "unit": "g"},
+          {"name": "Olives", "quantity": "50", "unit": "g"},
+          {"name": "Pita Bread", "quantity": "2", "unit": "pieces"},
+          {"name": "Hummus", "quantity": "200", "unit": "g"}
+      ],
+      "cooking_time": 0,
+      "prep_time": 20,
+      "servings": 4,
+      "description": "This vibrant Mediterranean Mezze Feast Bowl is a perfect blend of fresh, nutritious ingredients that will nourish your body and delight your taste buds. Packed with crisp vegetables, creamy hummus, tangy feta, and hearty pita bread, it's a feast for the senses.",
+      "instructions": "1. Chop the cucumber, tomatoes, and red onion into bite-sized pieces. 2. Crumble the feta cheese. 3. Slice the olives. 4. Arrange the pita bread and hummus on a large serving platter. 5. Add the chopped vegetables, feta cheese, and olives to the platter. 6. Serve with a drizzle of olive oil and a sprinkle of fresh herbs.",
+      "status": 1,
+      "categories": [
+          {"name": "Under 30 mins"},
+          {"name": "Lunch"},
+          {"name": "Gluten free"}
+      ]
+  },
+  {
+      "title": "Baked Eggs & Garlicky Greens",
+      "slug": "baked-eggs-garlicky-greens",
+      "author": 1,
+      "featured_image": "image_url_here",
+      "ingredients": [
+          {"name": "Eggs", "quantity": "6", "unit": "pieces"},
+          {"name": "Garlic", "quantity": "4", "unit": "cloves"},
+          {"name": "Spinach", "quantity": "200", "unit": "g"},
+          {"name": "Cherry Tomatoes", "quantity": "150", "unit": "g"},
+          {"name": "Feta Cheese", "quantity": "50", "unit": "g"},
+          {"name": "Olive Oil", "quantity": "30", "unit": "ml"},
+          {"name": "Salt", "quantity": "to taste"},
+          {"name": "Pepper", "quantity": "to taste"}
+      ],
+      "cooking_time": 15,
+      "prep_time": 10,
+      "servings": 4,
+      "description": "This Baked Eggs & Garlicky Greens dish is a nutritious and satisfying breakfast that will energize your morning. The combination of creamy eggs, garlicky greens, and tangy feta cheese creates a comforting and flavorful meal.",
+      "instructions": "1. Preheat the oven to 180°C (350°F). 2. Grease a baking dish with olive oil. 3. Sauté the garlic in olive oil until fragrant. 4. Add the spinach and cherry tomatoes, cooking until wilted. 5. Crack the eggs into the baking dish, spacing them evenly. 6. Sprinkle the sautéed greens and feta cheese over the eggs. 7. Season with salt and pepper. 8. Bake for 10-12 minutes, or until the eggs are set. 9. Serve hot with a side of crusty bread.",
+      "status": 1,
+      "categories": [
+          {"name": "Under 30 mins"},
+          {"name": "Breakfast"},
+          {"name": "Vegetarian"}
+      ]
+  }
+]
