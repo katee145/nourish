@@ -1,0 +1,55 @@
+[
+  {
+      "title": "Mediterranean Mezze Feast Bowl",
+      "slug": "mediterranean-mezze-feast-bowl",
+      "author": 1,
+      "featured_image": "image_url_here",
+      "ingredients": [
+          {"name": "Cucumber", "quantity": "1", "unit": "large"},
+          {"name": "Tomatoes", "quantity": "2", "unit": "medium"},
+          {"name": "Red Onion", "quantity": "1", "unit": "small"},
+          {"name": "Feta Cheese", "quantity": "100", "unit": "g"},
+          {"name": "Olives", "quantity": "50", "unit": "g"},
+          {"name": "Pita Bread", "quantity": "2", "unit": "pieces"},
+          {"name": "Hummus", "quantity": "200", "unit": "g"}
+      ],
+      "cooking_time": 0,
+      "prep_time": 20,
+      "servings": 4,
+      "description": "This vibrant Mediterranean Mezze Feast Bowl is a perfect blend of fresh, nutritious ingredients that will nourish your body and delight your taste buds. Packed with crisp vegetables, creamy hummus, tangy feta, and hearty pita bread, it's a feast for the senses.",
+      "instructions": "1. Chop the cucumber, tomatoes, and red onion into bite-sized pieces. 2. Crumble the feta cheese. 3. Slice the olives. 4. Arrange the pita bread and hummus on a large serving platter. 5. Add the chopped vegetables, feta cheese, and olives to the platter. 6. Serve with a drizzle of olive oil and a sprinkle of fresh herbs.",
+      "status": 1,
+      "categories": [
+          {"name": "Under 30 mins"},
+          {"name": "Lunch"},
+          {"name": "Gluten free"}
+      ]
+  },
+  {
+      "title": "Baked Eggs & Garlicky Greens",
+      "slug": "baked-eggs-garlicky-greens",
+      "author": 1,
+      "featured_image": "image_url_here",
+      "ingredients": [
+          {"name": "Eggs", "quantity": "6", "unit": "pieces"},
+          {"name": "Garlic", "quantity": "4", "unit": "cloves"},
+          {"name": "Spinach", "quantity": "200", "unit": "g"},
+          {"name": "Cherry Tomatoes", "quantity": "150", "unit": "g"},
+          {"name": "Feta Cheese", "quantity": "50", "unit": "g"},
+          {"name": "Olive Oil", "quantity": "30", "unit": "ml"},
+          {"name": "Salt", "quantity": "to taste"},
+          {"name": "Pepper", "quantity": "to taste"}
+      ],
+      "cooking_time": 15,
+      "prep_time": 10,
+      "servings": 4,
+      "description": "This Baked Eggs & Garlicky Greens dish is a nutritious and satisfying breakfast that will energize your morning. The combination of creamy eggs, garlicky greens, and tangy feta cheese creates a comforting and flavorful meal.",
+      "instructions": "1. Preheat the oven to 180°C (350°F). 2. Grease a baking dish with olive oil. 3. Sauté the garlic in olive oil until fragrant. 4. Add the spinach and cherry tomatoes, cooking until wilted. 5. Crack the eggs into the baking dish, spacing them evenly. 6. Sprinkle the sautéed greens and feta cheese over the eggs. 7. Season with salt and pepper. 8. Bake for 10-12 minutes, or until the eggs are set. 9. Serve hot with a side of crusty bread.",
+      "status": 1,
+      "categories": [
+          {"name": "Under 30 mins"},
+          {"name": "Breakfast"},
+          {"name": "Vegetarian"}
+      ]
+  }
+]
