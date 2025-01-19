@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* CSS Variables */
+/* Root styles */
 :root {
     --heading-font: "Gasoek One", sans-serif;
     --body-font: "Open Sans", sans-serif;
@@ -13,15 +13,18 @@
 
 p {
     font-family: var(--body-font);
+    color: var(--dark-green);
 }
 
 h1,
 h3,
 h2 {
     font-family: var(--heading-font);
-    font-weight: 300;
-
+    font-weight: 250;
+    color: var(--dark-green);
 }
+
+/*base.html*/
 
 nav {
     background-color: var(--off-white);
@@ -31,13 +34,30 @@ nav a {
     color: var(--dark-green);
 }
 
+.nourish-nav {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: var(--dark-green)
+}
+
+.login-text {
+    font-family: var(--body-font);
+    font-weight: 500;
+    color: var(--highlight-red);
+    margin-left: 12px;
+    font-style: italic;
+}
 
 body {
     background-color: var(--off-white)
 }
 
+/*index.html*/
+
 .homepage-image {
     margin-bottom: 0.5rem;
+    border-radius: 10px;
 }
 
 .recipe-link {
@@ -50,11 +70,10 @@ body {
     color: var(--highlight-yellow);
 }
 
-.nourish-nav {
-    font-family: var(--heading-font);
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    color: var(--dark-green)
+/*recipe_detail.html*/
+
+.recipe-page-image {
+    max-height: 50rem;
 }
 
 .thin {
@@ -68,10 +87,6 @@ body {
 .dark-bg {
     background-color: #445261;
 }
-
-/*.main-bg {
-    background-color: #F9FAFC;
-} */
 
 .card {
     border: none;
@@ -135,10 +150,10 @@ body {
     z-index: 100;
 }
 
-.post-title {
+/*.post-title {
     margin-top: 10%;
     margin-left: 5%;
-}
+} */
 
 .post-subtitle {
     margin-left: 5%;

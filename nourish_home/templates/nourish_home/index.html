@@ -10,7 +10,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in object_list %}
-                <div class="col-md-4">
+                <div class="col-lg-3 col-sm-6">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -30,14 +30,11 @@
                                     {{ recipe.title }}
                                 </a>
                             </h2>
-
-
-                            <hr />
                             <p class="card-text text-muted h6">{{ recipe.created_on }}</p>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+                {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row">
                 {% endif %}
