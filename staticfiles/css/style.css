@@ -43,17 +43,11 @@ body {
 .recipe-link {
     font-weight: 300;
     color: var(--dark-green);
-}
-
-.post-link {
     text-decoration: none;
-    color: #445261;
 }
 
-.recipe-link:hover
-.post-link:hover,
-.page-link {
-    color: var(--light-green);
+.recipe-link:hover {
+    color: var(--highlight-yellow);
 }
 
 .nourish-nav {
