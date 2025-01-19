@@ -36,6 +36,10 @@ body {
     background-color: var(--off-white)
 }
 
+.homepage-image {
+    margin-bottom: 0.5rem;
+}
+
 .recipe-link {
     font-weight: 300;
     color: var(--dark-green);
