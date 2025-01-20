@@ -115,6 +115,35 @@ footer {
     max-height: 50rem;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center buttons vertically */
+    margin-bottom: 1rem; /* Add some space from the footer content */
+  }
+  
+  .pagination li {
+    margin: 0 0.5rem;
+  }
+  
+  .page-link {
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--dark-green); /* Add a subtle border */
+    border-radius: 6px; /* Optional: Add rounded corners */
+  }
+  
+  .page-link:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green); /* Invert colors on hover */
+    border: 1.5px solid var(--light-green);
+  }
+
 .thin {
     font-weight: 300;
 }
