@@ -24,10 +24,17 @@ class RecipeDetailView(View):
         recipe = get_object_or_404(Recipe, slug=slug, status=1)
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         comment_form = CommentForm()
+
+        # Process ingredients and instructions
+        ingredients = recipe.ingredients.splitlines() if recipe.ingredients else []
+        instructions = recipe.instructions.splitlines() if recipe.instructions else []
+
         return render(request, "recipe_detail.html", {
             "recipe": recipe,
             "comments": comments,
             "comment_form": comment_form,
+            "ingredients": ingredients,
+            "instructions": instructions,
         })
 
     # def post(self, request, slug, *args, **kwargs):

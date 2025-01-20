@@ -13,6 +13,7 @@
         <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
         <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} mins</p>
         <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+        
     </div>
     <div class="image-section flex-grow-1">
         {% if "placeholder" in recipe.featured_image.url %}
@@ -30,10 +31,32 @@
                 <!-- Ingredients list -->
                 <h2>Ingredients</h2>
                 <ul>
-                    {% for ingredient in recipe.ingredient_set.all %}
-                    <li>{{ ingredient.quantity }} {{ ingredient.unit }} {{ ingredient.name }}</li>
+                    {% for ingredient in ingredients %}
+                        <li>{{ ingredient.strip }}</li>
                     {% endfor %}
                 </ul>
+
+                <!-- Instructions -->
+                <h2>Instructions</h2>
+                <ol>
+                    {% for instruction in instructions %}
+                        <li>{{ instruction.strip }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body">
+                <!-- Ingredients list -->
+                <h2>Ingredients</h2>
+                <p class="card-text">{{ recipe.ingredients | safe }}</p>
 
                 <!-- Instructions -->
                 <h2>Instructions</h2>

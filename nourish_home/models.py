@@ -20,7 +20,7 @@ class Recipe(models.Model):
         User, on_delete=models.SET_NULL, null=True, related_name="recipes"
     )
     featured_image = CloudinaryField('image', default='placeholder')
-    ingredients = models.ManyToManyField('Ingredient', related_name='recipes', blank=True)  # Added related_name here
+    ingredients = models.TextField(blank=True)  # Store ingredients as a string
     cooking_time = models.IntegerField(default=0)
     prep_time = models.IntegerField(default=0)
     servings = models.PositiveIntegerField(default=1)
@@ -30,6 +30,7 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.title
+
 
 
 class Ingredient(models.Model):
