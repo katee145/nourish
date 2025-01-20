@@ -109,12 +109,6 @@ footer {
     color: var(--highlight-yellow);
 }
 
-/*recipe_detail.html*/
-
-.recipe-page-image {
-    max-height: 50rem;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -139,6 +133,30 @@ footer {
   }
   
   .page-link:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green); /* Invert colors on hover */
+    border: 1.5px solid var(--light-green);
+  }
+
+/*recipe_detail.html*/
+
+.recipe-page-image {
+    max-height: 50rem;
+}
+
+.submit-comment {
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--dark-green); /* Add a subtle border */
+    border-radius: 6px; /* Optional: Add rounded corners */
+  }
+  
+  .submit-comment:hover {
     color: var(--off-white);
     background-color: var(--dark-green); /* Invert colors on hover */
     border: 1.5px solid var(--light-green);

@@ -51,22 +51,7 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4 mt-3 left top">
-            <div class="card-body">
-                <!-- Ingredients list -->
-                <h2>Ingredients</h2>
-                <p class="card-text">{{ recipe.ingredients | safe }}</p>
-
-                <!-- Instructions -->
-                <h2>Instructions</h2>
-                <p class="card-text">{{ recipe.instructions | safe }}</p>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Displaying Comments -->
+        <!-- Displaying Comments -->
     <div class="row">
         <div class="col-md-8 card mb-4 mt-3">
             <h3>Comments:</h3>
@@ -110,7 +95,7 @@
             <form id="commentForm" method="post" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <button id="submitButton" type="submit" class="btn btn-lg submit-comment">Submit</button>
             </form>
             {% else %}
             <p><a href="{% url 'login' %}">Log in</a> to post a comment.</p>
