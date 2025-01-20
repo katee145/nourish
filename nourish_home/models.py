@@ -9,6 +9,15 @@ STATUS = (
     (1, 'Published'),
 ) 
 
+class Category(models.Model):
+    """
+    Model representing a recipe category.
+    """
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
 
 class Recipe(models.Model):
     """
@@ -16,6 +25,7 @@ class Recipe(models.Model):
     """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
+    categories = models.ManyToManyField(Category, related_name='recipes', blank=True)  # Multiple categories allowed
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="recipes"
     )
@@ -44,16 +54,6 @@ class Ingredient(models.Model):
 
     def __str__(self):
         return f"{self.quantity} {self.unit} {self.name}"
-
-
-class Category(models.Model):
-    """
-    Model representing a recipe category.
-    """
-    name = models.CharField(max_length=100, unique=True)
-
-    def __str__(self):
-        return self.name
 
 
 class RecipeCategory(models.Model):

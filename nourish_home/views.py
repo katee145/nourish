@@ -4,16 +4,28 @@ from django.views import View
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Recipe, Comment
+from .models import Recipe, Comment, Category
 from .forms import CommentForm
 
 
 # Create your views here.
 class RecipeList(generic.ListView):
     model = Recipe
-    queryset = Recipe.objects.filter(status=1)
-    template_name = "nourish_home/index.html"
+    template_name = "nourish_home/index.html"  # Make sure this template exists
     paginate_by = 12
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        category_slug = self.request.GET.get('category')  # Filtering by category
+        if category_slug:
+            queryset = queryset.filter(categories__slug=category_slug)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        # Fetch all categories for the dropdown in the template
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()  # Add categories to the context
+        return context
 
 
 class RecipeDetailView(View):
