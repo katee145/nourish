@@ -26,8 +26,10 @@ h2 {
 
 /*base.html*/
 
-nav {
-    background-color: var(--off-white);
+#base-nav {
+    background-color: var(--light-green);
+    border-bottom: 1px solid var(--dark-green);
+    margin-bottom: 1rem;
 }
 
 nav a {
@@ -50,7 +52,7 @@ nav a {
 }
 
 body {
-    background-color: var(--off-white)
+    background-color: var(--off-white);
 }
 
 footer {
@@ -60,6 +62,7 @@ footer {
     flex-direction: column; /* Align items vertically */
     justify-content: center; /* Center items vertically within the footer */
     align-items: center; /* This is the key addition */
+    bottom: 0;
   }
   
   footer a {
@@ -94,6 +97,31 @@ footer {
 
 /*index.html*/
 
+/* External CSS for Filter Accordion */
+#filterAccordion .accordion-item {
+    border: 1px solid var(--dark-green);
+    background-color: var(var(--light-green));
+}
+
+#filterAccordion .accordion-body {
+    background-color: var(--off-white);
+}
+
+#filterAccordion .accordion-header button {
+    background-color: var(--light-green); 
+    color: var(--dark-green); 
+    border: 1px solid var(--light-green); 
+}
+
+#filterAccordion .form-check-label {
+    color: var(--dark-green); 
+}
+
+#filterAccordion .form-check-input {
+    accent-color: var(--highlight-yellow); 
+}
+
+
 .homepage-image {
     border-radius: 10px;
 }
@@ -110,7 +138,7 @@ footer {
 }
 
 .recipe-link:hover {
-    color: var(--highlight-red);    
+    color: var(--highlight-yellow);    
 }
 
 .card-img-top-container { 
