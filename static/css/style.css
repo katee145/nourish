@@ -100,7 +100,7 @@ footer {
 /* External CSS for Filter Accordion */
 #filterAccordion .accordion-item {
     border: 1px solid var(--dark-green);
-    background-color: var(var(--light-green));
+    background-color: var(var(--dark-green));
 }
 
 #filterAccordion .accordion-body {
@@ -108,9 +108,9 @@ footer {
 }
 
 #filterAccordion .accordion-header button {
-    background-color: var(--light-green); 
-    color: var(--dark-green); 
-    border: 1px solid var(--light-green); 
+    background-color: var(--dark-green); 
+    color: var(--off-white); 
+    border: 1px solid var(--dark-green); 
 }
 
 #filterAccordion .form-check-label {
@@ -138,7 +138,7 @@ footer {
 }
 
 .recipe-link:hover {
-    color: var(--highlight-yellow);    
+    color: var(--highlight-red);    
 }
 
 .card-img-top-container { 
