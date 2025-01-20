@@ -53,6 +53,45 @@ body {
     background-color: var(--off-white)
 }
 
+footer {
+    background-color: var(--dark-green);
+    padding: 1rem;
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically within the footer */
+    align-items: center; /* This is the key addition */
+  }
+  
+  footer a {
+    color: var(--off-white);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    text-decoration: none;
+  }
+ 
+  footer a:hover {
+    color: var(--highlight-yellow);
+  }
+
+  .fab {
+    font-size: 1.5rem;
+    color: var(--off-white);
+    padding: 1.5rem;
+  }
+
+  .fab:hover {
+    color: var(--highlight-yellow);
+  }
+
+  .footer-nourish {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--light-green);
+    font-weight: 180;
+    letter-spacing: 0.5px;
+  }
+
 /*index.html*/
 
 .homepage-image {

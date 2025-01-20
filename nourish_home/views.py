@@ -12,7 +12,7 @@ from .forms import CommentForm
 class RecipeList(generic.ListView):
     model = Recipe
     template_name = "nourish_home/index.html"  # Make sure this template exists
-    paginate_by = 12
+    paginate_by = 8
 
     def get_queryset(self):
         queryset = super().get_queryset()

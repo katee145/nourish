@@ -3,22 +3,23 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
+<div class="container-fluid footer">
     <div class="row">
-        <!-- Category Filters -->
-        <div class="col-12 mt-3 left">
-            <div class="mb-3">
-                <h3>Filter by Category</h3>
-                {% for category in categories %}
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="{{ category.slug }}"
-                        id="category-{{ category.id }}" name="category" data-category="{{ category.slug }}">
-                    <label class="form-check-label" for="category-{{ category.id }}">{{ category.name }}</label>
-                </div>
-                {% endfor %}
+      <div class="col-12 mt-3 left">
+        <div class="mb-3">
+          <h3>Filter by Category</h3>
+          {% for category in categories %}
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="{{ category.slug }}"
+                     id="category-{{ category.id }}" name="category" data-category="{{ category.slug }}">
+              <label class="form-check-label" for="category-{{ category.id }}">{{ category.name }}</label>
             </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
+    <div id="recipe-container"></div>
+  </div>
 
     <!-- Blog Entries Column -->
     <div class="col-12 mt-3 left">
@@ -77,6 +78,7 @@
 </nav>
 {% endif %}
 </div>
+
 
 <!-- index.html content ends here -->
 {% endblock %}

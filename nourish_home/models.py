@@ -23,20 +23,20 @@ class Recipe(models.Model):
     """
     Model for recipe.
     """
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    categories = models.ManyToManyField(Category, related_name='recipes', blank=True)  # Multiple categories allowed
+    title = models.CharField(max_length=200, unique=True, blank=False)
+    slug = models.SlugField(max_length=200, unique=True, blank=False)
+    categories = models.ManyToManyField(Category, related_name='recipes', blank=False)  # Multiple categories required
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, related_name="recipes"
+        User, on_delete=models.SET_NULL, null=True, related_name="recipes", blank=False
     )
-    featured_image = CloudinaryField('image', default='placeholder')
-    ingredients = models.TextField(blank=True)  # Store ingredients as a string
-    cooking_time = models.IntegerField(default=0)
-    prep_time = models.IntegerField(default=0)
-    servings = models.PositiveIntegerField(default=1)
-    description = models.TextField()
-    instructions = models.TextField()
-    status = models.IntegerField(choices=STATUS, default=0)
+    featured_image = CloudinaryField('image', default='placeholder', blank=True)  # Image can be left blank
+    ingredients = models.TextField(blank=False)  # Ingredients are required
+    cooking_time = models.IntegerField(default=0, blank=False)
+    prep_time = models.IntegerField(default=0, blank=False)
+    servings = models.PositiveIntegerField(default=1, blank=False)
+    description = models.TextField(blank=False)
+    instructions = models.TextField(blank=False)
+    status = models.IntegerField(choices=STATUS, default=0, blank=False)
 
     def __str__(self):
         return self.title
