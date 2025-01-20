@@ -95,19 +95,31 @@ footer {
 /*index.html*/
 
 .homepage-image {
-    margin-bottom: 0.5rem;
     border-radius: 10px;
 }
 
+.homepage-image:hover {
+    transform: scale(1.03);
+}
+
 .recipe-link {
-    font-weight: 300;
+    font-weight: 200;
     color: var(--dark-green);
     text-decoration: none;
+    padding-top: 0;
 }
 
 .recipe-link:hover {
-    color: var(--highlight-yellow);
+    color: var(--highlight-red);    
 }
+
+.card-img-top-container { 
+    position: relative; /* Position the image container relative to itself */
+  }
+  
+  .card-body {
+    padding-top: 0rem;
+  }
 
 .pagination {
     display: flex;
