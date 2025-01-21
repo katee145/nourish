@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Recipe, Comment, Category
 from .forms import CommentForm
-
+from django.db.models import Q
 
 # Create your views here.
 class RecipeList(generic.ListView):
@@ -17,8 +17,18 @@ class RecipeList(generic.ListView):
     def get_queryset(self):
         queryset = super().get_queryset()
         category_slug = self.request.GET.get('category')  # Filtering by category
+        search_query = self.request.GET.get('search') # Search
         if category_slug:
-            queryset = queryset.filter(categories__slug=category_slug)
+            queryset = queryset.filter(categories__name=category_slug)
+        # Search Query Logic. 
+        if search_query:
+            queryset = queryset.filter(
+                Q(title__icontains=search_query) |
+                Q(categories__name__icontains=search_query) |
+                Q(ingredients__icontains=search_query)
+            ).distinct()
+
+
         return queryset
 
     def get_context_data(self, **kwargs):

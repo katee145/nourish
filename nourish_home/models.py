@@ -14,6 +14,7 @@ class Category(models.Model):
     Model representing a recipe category.
     """
     name = models.CharField(max_length=100, unique=True)
+    # safe_name = would act like a slug, remvoe whitespace and lowercase. e.g. Gluten Free = gluten-free
 
     def __str__(self):
         return self.name

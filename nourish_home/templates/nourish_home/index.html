@@ -2,89 +2,127 @@
 {% load static %}
 {% block content %}
 
-<!-- index.html content starts here -->
-<div class="container-fluid footer">
-    <div class="row">
-      <div class="col-12 mt-3 left">
-        <div class="accordion" id="filterAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="filterHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterContent" aria-expanded="false" aria-controls="filterContent">
-                Filter Recipes
-              </button>
-            </h2>
-            <div id="filterContent" class="accordion-collapse collapse" aria-labelledby="filterHeading" data-bs-parent="#filterAccordion">
-              <div class="accordion-body">
-                {% for category in categories %}
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="{{ category.slug }}"
-                           id="category-{{ category.id }}" name="category" data-category="{{ category.slug }}">
-                    <label class="form-check-label" for="category-{{ category.id }}">{{ category.name }}</label>
-                  </div>
-                {% endfor %}
+<!-- Recipe Filter -->
+<!--<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-12 mt-3 left">
+      <div class="accordion" id="filterAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="filterHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#filterContent" aria-expanded="false" aria-controls="filterContent">
+              Filter Recipes
+            </button>
+          </h2>
+          <div id="filterContent" class="accordion-collapse collapse" aria-labelledby="filterHeading"
+            data-bs-parent="#filterAccordion">
+            <div class="accordion-body">
+              {% for category in categories %}
+              <div class="form-check form-check-inline">
+                <a class="pill" href="?category={{ category.safe_name}}">{{category.name}}</a>
+                <input class="form-check-input" type="checkbox" value="{{ category.slug }}"
+                  id="category-{{ category.id }}" name="category" data-category="{{ category.slug }}">
+                <label class="form-check-label" for="category-{{ category.id }}">{{ category.name }}</label>
               </div>
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div> -->
 
-    <!-- Blog Entries Column -->
-    <div class="col-12 mt-3 left">
-        <div class="row">
-          {% for recipe in object_list %}
-            <div class="col-lg-3 col-sm-6">
-              <div class="card mb-4">
-                <a href="{% url 'recipe_detail' recipe.slug %}" aria-label="Link to recipe"> 
-                  <div class="card-body">
-                    <div class="image-container">
-                      {% if "placeholder" in recipe.featured_image.url %}
-                        <img class="card-img-top homepage-image" src="{% static 'images/placeholder.jpg' %}"
-                             alt="placeholder image">
-                      {% else %}
-                        <img class="card-img-top homepage-image" src=" {{ recipe.featured_image.url }}"
-                             alt="{{ recipe.title }}">
-                      {% endif %}
-                    </div>
-                  </div>
-                </a>
-                <div class="card-body"> 
-                  <h2 class="card-title">
-                    <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link" aria-label="Link to recipe">
-                      {{ recipe.title }}
-                    </a>
-                  </h2>
-                  <p class="category-list-home">{% for category in recipe.categories.all %}
-                    {{ category.name }}{% if not forloop.last %} | {% endif %}
-                    {% endfor %}</p>
-                </div>
-              </div>
+<!-- Search bar-->
+<div class="container">
+  <form method="get" action="" class="search-form">
+      <div class="search-bar">
+          <input
+              type="text"
+              name="search"
+              placeholder="Search for recipes..."
+              value="{{ request.GET.search }}"
+              class="search-input"
+              list="suggestions"
+          />
+          <button type="submit" class="search-button">
+              <i class="fas fa-search"></i>
+          </button>
+      </div>
+      <!-- Suggested search terms -->
+      <datalist id="suggestions">
+          <option value="Vegetarian">
+          <option value="Vegan">
+          <option value="Gluten free">
+          <option value="Meat">
+          <option value="Fish">
+          <option value="Breakfast">
+          <option value="Lunch">
+          <option value="Dinner">
+          <option value="Meat">
+          <option value="Budget eats">
+          <option value="Wow your guests">
+      </datalist>
+  </form>
+</div>
+
+
+
+<!-- Recipe Entries -->
+<div class="col-12 mt-3 left">
+  <div class="row">
+    {% for recipe in object_list %}
+    <div class="col-lg-3 col-sm-6">
+      <div class="card mb-4">
+        <a href="{% url 'recipe_detail' recipe.slug %}" aria-label="Link to recipe">
+          <div class="card-body">
+            <div class="image-container">
+              {% if "placeholder" in recipe.featured_image.url %}
+              <img class="card-img-top homepage-image" src="{% static 'images/placeholder.jpg' %}"
+                alt="placeholder image">
+              {% else %}
+              <img class="card-img-top homepage-image" src=" {{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+              {% endif %}
             </div>
-            {% if forloop.counter|divisibleby:4 %}
-              </div>
-              <div class="row">
-            {% endif %}
-          {% endfor %}
+          </div>
+        </a>
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link" aria-label="Link to recipe">
+              {{ recipe.title }}
+            </a>
+          </h2>
+          <p class="category-list-home">{% for category in recipe.categories.all %}
+            {{ category.name }}{% if not forloop.last %} | {% endif %}
+            {% endfor %}</p>
         </div>
       </div>
+    </div>
+    {% if forloop.counter|divisibleby:4 %}
+  </div>
+  <div class="row">
+    {% endif %}
+    {% endfor %}
+  </div>
 </div>
+</div>
+<!--Next and previous buttons-->
 {% if is_paginated %}
 <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-        {% if page_obj.has_previous %}
-        <li>
-            <a href="?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Goes to preview page">&laquo; PREV</a>
-        </li>
-        {% endif %}
-        {% if page_obj.has_next %}
-        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link" aria-label="Goes to next page"> NEXT &raquo;</a></li>
-        {% endif %}
-    </ul>
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+    <li>
+      <a href="?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Goes to preview page">&laquo;
+        PREV</a>
+    </li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link" aria-label="Goes to next page"> NEXT
+        &raquo;</a></li>
+    {% endif %}
+  </ul>
 </nav>
 {% endif %}
 </div>
 
-
-<!-- index.html content ends here -->
 {% endblock %}
