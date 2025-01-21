@@ -36,7 +36,7 @@
           {% for recipe in object_list %}
             <div class="col-lg-3 col-sm-6">
               <div class="card mb-4">
-                <a href="{% url 'recipe_detail' recipe.slug %}"> 
+                <a href="{% url 'recipe_detail' recipe.slug %}" aria-label="Link to recipe"> 
                   <div class="card-body">
                     <div class="image-container">
                       {% if "placeholder" in recipe.featured_image.url %}
@@ -51,7 +51,7 @@
                 </a>
                 <div class="card-body"> 
                   <h2 class="card-title">
-                    <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link">
+                    <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link" aria-label="Link to recipe">
                       {{ recipe.title }}
                     </a>
                   </h2>
@@ -72,11 +72,11 @@
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li>
-            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Goes to preview page">&laquo; PREV</a>
         </li>
         {% endif %}
         {% if page_obj.has_next %}
-        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link" aria-label="Goes to next page"> NEXT &raquo;</a></li>
         {% endif %}
     </ul>
 </nav>
