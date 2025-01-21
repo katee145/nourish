@@ -111,6 +111,10 @@ def comment_delete(request, slug, comment_id):
     View to delete a comment
     """
     recipe = get_object_or_404(Recipe, slug=slug, status=1)
+
+    if not comment_id:
+        return redirect('recipe_detail', slug=slug)
+
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:

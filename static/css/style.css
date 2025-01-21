@@ -26,6 +26,14 @@ h2 {
 
 /*base.html*/
 
+.alert {
+    color: var(--highlight-red);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0;
+}
+
 #base-nav {
     background-color: var(--light-green);
     border-bottom: 1px solid var(--dark-green);
@@ -260,18 +268,18 @@ form {
 }
 
 .published-comment {
-    border: 1.5px solid var(--dark-green); /* Existing border */
-    border-radius: 10px; /* Rounded corners */
-    padding-top: 10px; /* Top padding */
-    padding-left: 10px; /* Left padding */
+    border: 1.5px solid var(--dark-green); 
+    border-radius: 10px;
+    padding-top: 10px; 
+    padding-left: 10px; 
     padding-right: 10px;
     margin-bottom: 1rem;
 }
 
-.comment-buttons {
+#comment-buttons {
     display: flex;
-    justify-content: flex-end; /* Aligns buttons to the right */
-    gap: 10px; /* Adds spacing between buttons */
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .btn-edit:hover {

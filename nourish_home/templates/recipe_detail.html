@@ -64,7 +64,7 @@
             <div>
                 {% for comment in comments %}
                 <div class="p-2 comments
-      {% if not comment.approved and comment.author == user %}
+    {% if not comment.approved and comment.author == user %}
       faded{% elif not comment.approved %} d-none{% endif %}">
                     <div class="published-comment">
                         <p class="font-weight-bold">
@@ -77,18 +77,17 @@
                             {{ comment.body | linebreaks }}
                         </div>
                     </div>
-                    <!--{% if not comment.approved and comment.author == user %}
+                    {% if not comment.approved and comment.author == user %}
                     <p class="approval">
                         This comment is awaiting approval
                     </p>
-                    {% endif %} -->
-                    {% if user.is_authenticated and comment.author == user %}
-                    <div class="comment-buttons">
+                    {% endif %}
+                    <div id="comment-buttons">
+                        {% if user.is_authenticated and comment.author == user %}
                         <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                         <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                        {% endif %}
                     </div>
-                    {% endif %}
-
                 </div>
                 {% empty %}
                 <p>Be the first to comment!</p>
@@ -96,6 +95,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-- Comment Form -->
     <div class="col-md-4">
@@ -116,7 +117,7 @@
 
 
     <!-- Delete confirmation modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -127,8 +128,8 @@
                     Are you sure you want to delete your comment? This action cannot be undone.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+                    <button type="button" class="btn btn-edit" data-bs-dismiss="modal">Close</button>
+                    <a id="deleteConfirm" href="#" class="btn btn-delete">Delete</a>
                 </div>
             </div>
         </div>

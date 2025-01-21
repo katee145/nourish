@@ -16,6 +16,6 @@ urlpatterns = [
         views.comment_edit, name='comment_edit'),
     path('<slug:slug>/delete_comment/<int:comment_id>',
         views.comment_delete, name='comment_delete'),
-    path('', views.RecipeList.as_view(), name='recipe_list'),  # Recipe list page
+    path('', views.RecipeList.as_view(), name='recipe_list'), 
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
 ]
