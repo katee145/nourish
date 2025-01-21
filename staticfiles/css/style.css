@@ -26,8 +26,10 @@ h2 {
 
 /*base.html*/
 
-nav {
-    background-color: var(--off-white);
+#base-nav {
+    background-color: var(--light-green);
+    border-bottom: 1px solid var(--dark-green);
+    margin-bottom: 1rem;
 }
 
 nav a {
@@ -50,8 +52,12 @@ nav a {
 }
 
 body {
-    background-color: var(--off-white)
+    background-color: var(--off-white);
 }
+
+.min-vh-100 {
+    min-height: 100vh; /* Ensure the body takes up at least the viewport height */
+  }
 
 footer {
     background-color: var(--dark-green);
@@ -60,6 +66,8 @@ footer {
     flex-direction: column; /* Align items vertically */
     justify-content: center; /* Center items vertically within the footer */
     align-items: center; /* This is the key addition */
+    bottom: 0;
+    width: 100%;
   }
   
   footer a {
@@ -68,13 +76,19 @@ footer {
     font-size: 1rem;
     text-decoration: none;
   }
-  
+ 
+  footer a:hover {
+    color: var(--highlight-yellow);
+  }
+
   .fab {
     font-size: 1.5rem;
     color: var(--off-white);
     padding: 1.5rem;
-    display: flex;
-    justify-content: center; /* Center icons horizontally */
+  }
+
+  .fab:hover {
+    color: var(--highlight-yellow);
   }
 
   .footer-nourish {
@@ -83,24 +97,91 @@ footer {
     font-size: 1.3rem;
     color: var(--light-green);
     font-weight: 180;
+    letter-spacing: 0.5px;
   }
 
 /*index.html*/
 
+/* External CSS for Filter Accordion */
+#filterAccordion .accordion-item {
+    border: 1px solid var(--dark-green);
+    background-color: var(var(--dark-green));
+}
+
+#filterAccordion .accordion-body {
+    background-color: var(--off-white);
+}
+
+#filterAccordion .accordion-header button {
+    background-color: var(--dark-green); 
+    color: var(--off-white); 
+    border: 1px solid var(--dark-green); 
+}
+
+#filterAccordion .form-check-label {
+    color: var(--dark-green); 
+}
+
+#filterAccordion .form-check-input {
+    accent-color: var(--highlight-yellow); 
+}
+
+
 .homepage-image {
-    margin-bottom: 0.5rem;
     border-radius: 10px;
 }
 
+.homepage-image:hover {
+    transform: scale(1.03);
+}
+
 .recipe-link {
-    font-weight: 300;
+    font-weight: 200;
     color: var(--dark-green);
     text-decoration: none;
+    padding-top: 0;
 }
 
 .recipe-link:hover {
-    color: var(--highlight-yellow);
+    color: var(--highlight-red);    
 }
+
+.card-img-top-container { 
+    position: relative; /* Position the image container relative to itself */
+  }
+  
+  .card-body {
+    padding-top: 0rem;
+  }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center buttons vertically */
+    margin-bottom: 1rem; /* Add some space from the footer content */
+  }
+  
+  .pagination li {
+    margin: 0 0.5rem;
+  }
+  
+  .page-link {
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--dark-green); /* Add a subtle border */
+    border-radius: 6px; /* Optional: Add rounded corners */
+  }
+  
+  .page-link:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green); /* Invert colors on hover */
+    border: 1.5px solid var(--light-green);
+  }
 
 /*recipe_detail.html*/
 
@@ -108,8 +189,26 @@ footer {
     max-height: 50rem;
 }
 
+.submit-comment {
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--dark-green); /* Add a subtle border */
+    border-radius: 6px; /* Optional: Add rounded corners */
+  }
+  
+  .submit-comment:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green); /* Invert colors on hover */
+    border: 1.5px solid var(--light-green);
+  }
+
 .thin {
-    font-weight: 300;
+   font-weight: 300;
 }
 
 .light-bg {
