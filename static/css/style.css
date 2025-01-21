@@ -231,6 +231,55 @@ footer a:hover {
 .ingredient-list li,
 .instruction-list li {
     margin-bottom: 0.5rem;
+    color: var(--dark-green);
+}
+
+#posting-as {
+    font-family: var(--body-font);
+    font-weight: 500;
+    color: var(--highlight-red);
+    font-style: italic;
+}
+
+.username {
+    text-transform: capitalize;
+}
+
+form {
+    color: var(--dark-green);
+}
+
+.btn-delete {
+    color: var(--off-white);
+    background: var(--highlight-red);
+}
+
+.btn-edit {
+    color: var(--dark-green);
+    background: var(--highlight-yellow);
+}
+
+.published-comment {
+    border: 1.5px solid var(--dark-green); /* Existing border */
+    border-radius: 10px; /* Rounded corners */
+    padding-top: 10px; /* Top padding */
+    padding-left: 10px; /* Left padding */
+    padding-right: 10px;
+    margin-bottom: 1rem;
+}
+
+.comment-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+.btn-edit:hover {
+    color: var(--off-white);
+}
+
+.btn-delete:hover {
+    color: var(--dark-green);
 }
 
 .submit-comment {
@@ -250,20 +299,7 @@ footer a:hover {
 .submit-comment:hover {
     color: var(--off-white);
     background-color: var(--dark-green);
-    /* Invert colors on hover */
     border: 1.5px solid var(--light-green);
-}
-
-.thin {
-    font-weight: 300;
-}
-
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #445261;
 }
 
 .card {
@@ -273,6 +309,10 @@ footer a:hover {
 
 .image-container {
     position: relative;
+}
+
+/*.thin {
+    font-weight: 300;
 }
 
 .image-flash {
@@ -288,10 +328,12 @@ footer a:hover {
     height: auto;
 }
 
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
+.light-bg {
+    background-color: #fff;
+}
+
+.dark-bg {
+    background-color: #445261;
 }
 
 .masthead {
@@ -328,12 +370,42 @@ footer a:hover {
     z-index: 100;
 }
 
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+
+
 /*.post-title {
     margin-top: 10%;
     margin-left: 5%;
 } */
 
-.post-subtitle {
+/*.post-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
@@ -385,4 +457,4 @@ footer a:hover {
 
 .approval {
     color: rgb(222, 146, 168);
-}
+}*/

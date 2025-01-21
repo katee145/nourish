@@ -66,24 +66,29 @@
                 <div class="p-2 comments
       {% if not comment.approved and comment.author == user %}
       faded{% elif not comment.approved %} d-none{% endif %}">
-                    <p class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class="font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
+                    <div class="published-comment">
+                        <p class="font-weight-bold">
+                            <span class="username"><strong>{{ comment.author }} | </strong></span>
+                            <span class="font-weight-normal">
+                                <strong>{{ comment.created_on }}</strong>
+                            </span>
+                        </p>
+                        <div id="comment{{ comment.id }}">
+                            {{ comment.body | linebreaks }}
+                        </div>
                     </div>
-                    {% if not comment.approved and comment.author == user %}
+                    <!--{% if not comment.approved and comment.author == user %}
                     <p class="approval">
                         This comment is awaiting approval
                     </p>
-                    {% endif %}
+                    {% endif %} -->
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                    <div class="comment-buttons">
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                    </div>
                     {% endif %}
+
                 </div>
                 {% empty %}
                 <p>Be the first to comment!</p>
@@ -97,7 +102,7 @@
         <div class="comment-form">
             {% if user.is_authenticated %}
             <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
+            <p id="posting-as">You are posting as <span class="username">{{ user.username }}</span></p>
             <form id="commentForm" method="post" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
