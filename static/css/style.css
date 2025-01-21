@@ -142,7 +142,13 @@ footer a:hover {
 .search-form {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .search-bar {
@@ -182,6 +188,17 @@ footer a:hover {
     background-color: var(--dark-green);
     color: var(--off-white);
 }
+
+.no-results {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--dark-green);
+  }
+
+.bold {
+    font-weight: 700;
+}
+  
 
 .homepage-image {
     border-radius: 10px;
