@@ -198,6 +198,13 @@ footer {
     margin-bottom: 2rem;
 }
 
+.category-list {
+    color: var(--highlight-red);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding-top: 0.5rem;
+}
+
 .ingredient-list {
     margin-bottom: 2rem;
 }

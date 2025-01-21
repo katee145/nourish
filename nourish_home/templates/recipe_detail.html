@@ -9,10 +9,14 @@
         <div class="col-lg-8 col-md-12 mb-3">
             <div class="title-section">
                 <h1 class="post-title">{{ recipe.title }}</h1>
+                <p class="category-list">{% for category in recipe.categories.all %} 
+                    {{ category.name }}{% if not forloop.last %} | {% endif %}
+                {% endfor %}</p>
                 <p>{{ recipe.description | safe }}</p>
+                
                 <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
                 <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} mins</p>
-                <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                <p><strong>Servings:</strong> {{ recipe.servings }}</p>                
             </div>
         </div>
 
