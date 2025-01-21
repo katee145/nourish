@@ -5,7 +5,7 @@ from django.db.models.signals import post_migrate
 from django.apps import apps
 
 def create_predefined_categories(sender, **kwargs):
-    # List of predefined categories you want to add
+    # List of predefined categories
     categories = ['Budget eats', 'Under 30 mins', 'Wow your guests', 'Breakfast', 'Lunch', 'Dinner', 'Gluten free', 'Vegetarian', 'Vegan', 'Meat', 'Fish', 'Protein-focused', 'Prep ahead']
     
     # Creates a category if it doesn't exist

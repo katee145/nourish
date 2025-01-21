@@ -55,7 +55,9 @@
                       {{ recipe.title }}
                     </a>
                   </h2>
-                  <p class="card-text text-muted h6">{{ recipe.created_on }}</p>
+                  <p class="category-list-home">{% for category in recipe.categories.all %}
+                    {{ category.name }}{% if not forloop.last %} | {% endif %}
+                    {% endfor %}</p>
                 </div>
               </div>
             </div>
