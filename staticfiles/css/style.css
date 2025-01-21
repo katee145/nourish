@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Root styles */
 :root {
-    --heading-font: "Gasoek One", sans-serif;
+    --heading-font: "Bowlby One", sans-serif;
     --body-font: "Open Sans", sans-serif;
     --dark-green: #1D4E2B;
     --light-green: #CAE4C3;
@@ -41,6 +41,10 @@ nav a {
     text-transform: uppercase;
     font-size: 1.6rem;
     color: var(--dark-green)
+}
+
+.login-notice {
+    margin-bottom: 1rem;
 }
 
 .login-text {
@@ -150,9 +154,13 @@ footer {
     position: relative; /* Position the image container relative to itself */
   }
   
-  .card-body {
+.card-body {
     padding-top: 0rem;
   }
+
+.container {
+    padding: 1rem;
+}
 
 .pagination {
     display: flex;
@@ -186,7 +194,26 @@ footer {
 /*recipe_detail.html*/
 
 .recipe-page-image {
-    max-height: 50rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.category-list {
+    color: var(--highlight-red);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding-top: 0.5rem;
+}
+
+.ingredient-list,
+.instruction-list,
+.comment-section {
+    margin-bottom: 2rem;
+}
+
+.ingredient-list li,
+.instruction-list li {
+    margin-bottom: 0.5rem;
 }
 
 .submit-comment {

@@ -4,16 +4,14 @@ from django_summernote.admin import SummernoteModelAdmin
 from django.db.models.signals import post_migrate
 from django.apps import apps
 
-# This function will create predefined categories after migrations
 def create_predefined_categories(sender, **kwargs):
     # List of predefined categories you want to add
     categories = ['Budget eats', 'Under 30 mins', 'Wow your guests', 'Breakfast', 'Lunch', 'Dinner', 'Gluten free', 'Vegetarian', 'Vegan', 'Meat', 'Fish', 'Protein-focused', 'Prep ahead']
     
-    # Loop through each category and add it if it doesn't exist
+    # Creates a category if it doesn't exist
     for category_name in categories:
         Category.objects.get_or_create(name=category_name)
 
-# Connect the signal to the function, ensuring it's triggered after migrations
 post_migrate.connect(create_predefined_categories, sender=apps.get_app_config('nourish_home'))
 
 @admin.register(Recipe)
@@ -28,3 +26,5 @@ class RecipeAdmin(SummernoteModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)  # This should be 'list_display'
+
+admin.site.register(Comment)
