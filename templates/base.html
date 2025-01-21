@@ -82,16 +82,19 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-        <p class="text-start login-text">You are currently logged in as {{ user }}</p>
-        {% else %}
-        <p class="text-start login-text">You are not logged in</p>
-        {% endif %}
+    <main>
 
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
+        <div class="login-notice flex-shrink-0 main-bg">
+            {% if user.is_authenticated %}
+            <p class="text-start login-text">You are currently logged in as {{ user }}</p>
+            {% else %}
+            <p class="text-start login-text">You are not logged in</p>
+            {% endif %}
+
+            {% block content %}
+
+            {% endblock content %}
+        </div>
 
     </main>
     <!-- Footer -->

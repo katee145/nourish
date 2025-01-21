@@ -43,6 +43,10 @@ nav a {
     color: var(--dark-green)
 }
 
+.login-notice {
+    margin-bottom: 1rem;
+}
+
 .login-text {
     font-family: var(--body-font);
     font-weight: 500;
@@ -150,7 +154,7 @@ footer {
     position: relative; /* Position the image container relative to itself */
   }
   
-  .card-body {
+.card-body {
     padding-top: 0rem;
   }
 
@@ -186,7 +190,21 @@ footer {
 /*recipe_detail.html*/
 
 .recipe-page-image {
-    max-height: 50rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.ingredient-list {
+    margin-bottom: 2rem;
+}
+
+.ingredient-list li,
+.instruction-list li {
+    margin-bottom: 0.5rem;
+}
+
+.comment-title {
+    padding-left: 16px;
 }
 
 .submit-comment {
