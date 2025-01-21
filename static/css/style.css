@@ -158,6 +158,10 @@ footer {
     padding-top: 0rem;
   }
 
+.container {
+    padding: 1rem;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -201,10 +205,6 @@ footer {
 .ingredient-list li,
 .instruction-list li {
     margin-bottom: 0.5rem;
-}
-
-.comment-title {
-    padding-left: 16px;
 }
 
 .submit-comment {
