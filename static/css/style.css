@@ -40,9 +40,16 @@ h2 {
     margin-bottom: 1rem;
 }
 
-nav a {
-    color: var(--dark-green);
+.navbar .nav-link {
+    color: var(--dark-green) !important; /* Override Bootstrap's default color */
+    font-weight: 350;
+    font-family: var(--body-font);
 }
+
+.navbar .nav-link.active {
+    font-weight: 480;
+}
+
 
 .nourish-nav {
     font-family: var(--heading-font);
