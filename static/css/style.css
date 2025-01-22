@@ -377,6 +377,12 @@ form {
     border-radius: 6px;
 }
 
+.submit-comment:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green);
+    border: 1.5px solid var(--light-green);
+}
+
 /* LOGIN/LOGOUT/SIGNUP.HTML */
 
 .btn-signup {
