@@ -34,6 +34,7 @@
     </div>
 </div>
 
+<!-- Ingredients and instructions -->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -64,7 +65,8 @@
             <h3 class="comment-title">Comments:</h3>
             <div>
                 {% for comment in comments %}
-                <div class="p-2 comments{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
+                <div
+                    class="p-2 comments{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
                     <div class="published-comment">
                         <p class="font-weight-bold">
                             <span class="username"><strong>{{ comment.author }} | </strong></span>
@@ -95,8 +97,6 @@
         </div>
     </div>
 
-
-
     <!-- Comment Form -->
     <div class="col-md-4">
         <div class="comment-form">
@@ -113,7 +113,6 @@
             {% endif %}
         </div>
     </div>
-
 
     <!-- Delete confirmation modal -->
     <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -139,5 +138,6 @@
 {% endblock content %}
 
 {% block extras %}
+<!--Link to JavaScript for comments-->
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
