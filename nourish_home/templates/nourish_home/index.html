@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<!-- Search bar-->
+<!-- Search bar -->
 <div class="container search-container">
   <form method="get" action="" class="search-form">
     <div class="search-bar">
@@ -42,7 +42,8 @@
           <div class="card-body">
             <div class="image-container">
               {% if "placeholder" in recipe.featured_image.url %}
-              <img class="card-img-top homepage-image" src="{% static 'images/placeholder.jpg' %}" alt="placeholder image">
+              <img class="card-img-top homepage-image" src="{% static 'images/placeholder.jpg' %}"
+                alt="placeholder image">
               {% else %}
               <img class="card-img-top homepage-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
               {% endif %}
@@ -57,7 +58,7 @@
           </h2>
           <p class="category-list-home">
             {% for category in recipe.categories.all %}
-              {{ category.name }}{% if not forloop.last %} | {% endif %}
+            {{ category.name }}{% if not forloop.last %} | {% endif %}
             {% endfor %}
           </p>
         </div>
