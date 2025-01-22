@@ -3,137 +3,138 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-<!-- Title and Recipe Details -->
-<div class="container">
-    <div class="row align-items-center">
-        <div class="col-lg-8 col-md-12 mb-3">
-            <div class="title-section">
-                <h1 class="post-title">{{ recipe.title }}</h1>
-                <p class="category-list">{% for category in recipe.categories.all %}
-                    {{ category.name }}{% if not forloop.last %} | {% endif %}
-                    {% endfor %}</p>
-                <p>{{ recipe.description | safe }}</p>
+<article>
+    <!-- Title and Recipe Details -->
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-md-12 mb-3">
+                <div class="title-section">
+                    <h1 class="post-title">{{ recipe.title }}</h1>
+                    <p class="category-list">{% for category in recipe.categories.all %}
+                        {{ category.name }}{% if not forloop.last %} | {% endif %}
+                        {% endfor %}</p>
+                    <p>{{ recipe.description | safe }}</p>
 
-                <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
-                <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} mins</p>
-                <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
+                    <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} mins</p>
+                    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-lg-4 col-md-12">
+                <div class="image-section">
+                    {% if "placeholder" in recipe.featured_image.url %}
+                    <img src="{% static 'images/placeholder.jpg' %}" class="w-100 recipe-page-image"
+                        alt="placeholder image">
+                    {% else %}
+                    <img src="{{ recipe.featured_image.url }}" class="w-100 recipe-page-image" alt="{{ recipe.title }}">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ingredients and instructions -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!--Ingredients-->
+                <div class="ingredient-list">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        {% for ingredient in ingredients %}
+                        <li>{{ ingredient.strip }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!--Instructions-->
+                <div class="instruction-list">
+                    <h2>Instructions</h2>
+                    <ol>
+                        {% for instruction in instructions %}
+                        <li>{{ instruction.strip }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
             </div>
         </div>
 
-        <!-- Image Section -->
-        <div class="col-lg-4 col-md-12">
-            <div class="image-section">
-                {% if "placeholder" in recipe.featured_image.url %}
-                <img src="{% static 'images/placeholder.jpg' %}" class="w-100 recipe-page-image"
-                    alt="placeholder image">
+        <!-- Displaying Comments -->
+        <div class="row">
+            <div class="col-md-8 comment-section">
+                <h3 class="comment-title">Comments:</h3>
+                <div>
+                    {% for comment in comments %}
+                    <div
+                        class="p-2 comments{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
+                        <div class="published-comment">
+                            <p class="font-weight-bold">
+                                <span class="username"><strong>{{ comment.author }} | </strong></span>
+                                <span class="font-weight-normal">
+                                    <strong>{{ comment.created_on }}</strong>
+                                </span>
+                            </p>
+                            <div id="comment{{ comment.id }}">
+                                {{ comment.body | linebreaks }}
+                            </div>
+                        </div>
+                        {% if not comment.approved and comment.author == user %}
+                        <p class="approval">
+                            This comment is awaiting approval
+                        </p>
+                        {% endif %}
+                        <div id="comment-buttons">
+                            {% if user.is_authenticated and comment.author == user %}
+                            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                            <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>Be the first to comment!</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Form -->
+        <div class="col-md-4">
+            <div class="comment-form">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p id="posting-as">You are posting as <span class="username">{{ user.username }}</span></p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-lg submit-comment">Submit</button>
+                </form>
                 {% else %}
-                <img src="{{ recipe.featured_image.url }}" class="w-100 recipe-page-image" alt="{{ recipe.title }}">
+                <p><a href="{% url 'login' %}">Log in</a> to post a comment.</p>
                 {% endif %}
             </div>
         </div>
-    </div>
-</div>
 
-<!-- Ingredients and instructions -->
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <!--Ingredients-->
-            <div class="ingredient-list">
-                <h2>Ingredients</h2>
-                <ul>
-                    {% for ingredient in ingredients %}
-                    <li>{{ ingredient.strip }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!--Instructions-->
-            <div class="instruction-list">
-                <h2>Instructions</h2>
-                <ol>
-                    {% for instruction in instructions %}
-                    <li>{{ instruction.strip }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <!-- Displaying Comments -->
-    <div class="row">
-        <div class="col-md-8 comment-section">
-            <h3 class="comment-title">Comments:</h3>
-            <div>
-                {% for comment in comments %}
-                <div
-                    class="p-2 comments{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
-                    <div class="published-comment">
-                        <p class="font-weight-bold">
-                            <span class="username"><strong>{{ comment.author }} | </strong></span>
-                            <span class="font-weight-normal">
-                                <strong>{{ comment.created_on }}</strong>
-                            </span>
-                        </p>
-                        <div id="comment{{ comment.id }}">
-                            {{ comment.body | linebreaks }}
-                        </div>
+        <!-- Delete confirmation modal -->
+        <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    {% if not comment.approved and comment.author == user %}
-                    <p class="approval">
-                        This comment is awaiting approval
-                    </p>
-                    {% endif %}
-                    <div id="comment-buttons">
-                        {% if user.is_authenticated and comment.author == user %}
-                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                        {% endif %}
+                    <div class="modal-body">
+                        Are you sure you want to delete your comment? This action cannot be undone.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">Close</button>
+                        <a id="deleteConfirm" href="#" class="btn btn-confirm">Delete</a>
                     </div>
                 </div>
-                {% empty %}
-                <p>Be the first to comment!</p>
-                {% endfor %}
             </div>
         </div>
     </div>
-
-    <!-- Comment Form -->
-    <div class="col-md-4">
-        <div class="comment-form">
-            {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p id="posting-as">You are posting as <span class="username">{{ user.username }}</span></p>
-            <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-lg submit-comment">Submit</button>
-            </form>
-            {% else %}
-            <p><a href="{% url 'login' %}">Log in</a> to post a comment.</p>
-            {% endif %}
-        </div>
-    </div>
-
-    <!-- Delete confirmation modal -->
-    <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete your comment? This action cannot be undone.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn btn-confirm">Delete</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+</article>
 
 {% endblock content %}
 
