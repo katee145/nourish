@@ -69,9 +69,10 @@ body {
 .alert {
     color: var(--highlight-red);
     font-family: var(--body-font);
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     padding: 0;
+    text-transform: uppercase;
 }
 
 .login-text {
@@ -376,8 +377,30 @@ form {
     border-radius: 6px;
 }
 
-.submit-comment:hover {
+/* LOGIN/LOGOUT/SIGNUP.HTML */
+
+.btn-signup {
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--dark-green);
+    border-radius: 6px;
+}
+
+.btn-signup:hover {
     color: var(--off-white);
     background-color: var(--dark-green);
     border: 1.5px solid var(--light-green);
+}
+
+.link {
+    color: var(--dark-green);
+}
+
+.link:hover {
+    color: var(--highlight-red);
 }
