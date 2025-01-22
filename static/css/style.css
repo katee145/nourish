@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* Root styles */
+/* ROOT STYLES */
 :root {
     --heading-font: "Bowlby One", sans-serif;
     --body-font: "Open Sans", sans-serif;
@@ -24,15 +24,9 @@ h2 {
     color: var(--dark-green);
 }
 
-/*base.html*/
+/* BASE.HTML */
 
-.alert {
-    color: var(--highlight-red);
-    font-family: var(--body-font);
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0;
-}
+/* base.html nav */
 
 #base-nav {
     background-color: var(--light-green);
@@ -41,7 +35,8 @@ h2 {
 }
 
 .navbar .nav-link {
-    color: var(--dark-green) !important; /* Override Bootstrap's default color */
+    color: var(--dark-green) !important;
+    /* Override Bootstrap's default color */
     font-weight: 350;
     font-family: var(--body-font);
 }
@@ -50,12 +45,33 @@ h2 {
     font-weight: 480;
 }
 
-
 .nourish-nav {
     font-family: var(--heading-font);
     text-transform: uppercase;
     font-size: 1.6rem;
     color: var(--dark-green)
+}
+
+/* base.html body */
+
+body {
+    background-color: var(--off-white);
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.username {
+    text-transform: capitalize;
+}
+
+.alert {
+    color: var(--highlight-red);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0;
 }
 
 .login-text {
@@ -66,14 +82,7 @@ h2 {
     font-style: italic;
 }
 
-body {
-    background-color: var(--off-white);
-}
-
-.min-vh-100 {
-    min-height: 100vh;
-    /* Ensure the body takes up at least the viewport height */
-}
+/* base.html footer */
 
 footer {
     background-color: var(--dark-green);
@@ -120,31 +129,9 @@ footer a:hover {
     letter-spacing: 0.5px;
 }
 
-/*index.html*/
+/* INDEX.HTML */
 
-/* External CSS for Filter Accordion */
-#filterAccordion .accordion-item {
-    border: 1px solid var(--dark-green);
-    background-color: var(var(--dark-green));
-}
-
-#filterAccordion .accordion-body {
-    background-color: var(--off-white);
-}
-
-#filterAccordion .accordion-header button {
-    background-color: var(--dark-green);
-    color: var(--off-white);
-    border: 1px solid var(--dark-green);
-}
-
-#filterAccordion .form-check-label {
-    color: var(--dark-green);
-}
-
-#filterAccordion .form-check-input {
-    accent-color: var(--highlight-yellow);
-}
+/* index.html search function */
 
 .search-form {
     display: flex;
@@ -200,12 +187,13 @@ footer a:hover {
     text-align: center;
     font-size: 1.3rem;
     color: var(--dark-green);
-  }
+}
 
 .bold {
     font-weight: 700;
 }
-  
+
+/* index.html recipe layout */
 
 .homepage-image {
     border-radius: 10px;
@@ -213,6 +201,15 @@ footer a:hover {
 
 .homepage-image:hover {
     transform: scale(1.03);
+}
+
+.image-container {
+    position: relative;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
 }
 
 .recipe-link {
@@ -226,9 +223,14 @@ footer a:hover {
     color: var(--highlight-red);
 }
 
+.category-list-home {
+    color: var(--highlight-red);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
 .card-img-top-container {
     position: relative;
-    /* Position the image container relative to itself */
 }
 
 .card-body {
@@ -239,13 +241,13 @@ footer a:hover {
     padding: 1rem;
 }
 
+/* index.html pagination */
+
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center buttons vertically */
     margin-bottom: 1rem;
-    /* Add some space from the footer content */
 }
 
 .pagination li {
@@ -261,25 +263,18 @@ footer a:hover {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border: 1.5px solid var(--dark-green);
-    /* Add a subtle border */
     border-radius: 6px;
-    /* Optional: Add rounded corners */
 }
 
 .page-link:hover {
     color: var(--off-white);
     background-color: var(--dark-green);
-    /* Invert colors on hover */
     border: 1.5px solid var(--light-green);
 }
 
-.category-list-home {
-    color: var(--highlight-red);
-    font-weight: 600;
-    font-size: 0.85rem;
-}
+/* RECIPE_DETAIL.HTML */
 
-/*recipe_detail.html*/
+/* recipe_detail.html formatting */
 
 .recipe-page-image {
     border-radius: 10px;
@@ -305,6 +300,12 @@ footer a:hover {
     color: var(--dark-green);
 }
 
+/* recipe_detail.html comment functionality */
+
+form {
+    color: var(--dark-green);
+}
+
 #posting-as {
     font-family: var(--body-font);
     font-weight: 500;
@@ -312,12 +313,19 @@ footer a:hover {
     font-style: italic;
 }
 
-.username {
-    text-transform: capitalize;
+.published-comment {
+    border: 1.5px solid var(--dark-green);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 1rem;
 }
 
-form {
-    color: var(--dark-green);
+#comment-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .btn-delete {
@@ -338,21 +346,6 @@ form {
 .btn-close-modal {
     color: var(--dark-green);
     background: var(--highlight-yellow);
-}
-
-.published-comment {
-    border: 1.5px solid var(--dark-green); 
-    border-radius: 10px;
-    padding-top: 10px; 
-    padding-left: 10px; 
-    padding-right: 10px;
-    margin-bottom: 1rem;
-}
-
-#comment-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
 }
 
 .btn-close-modal:hover {
@@ -380,9 +373,7 @@ form {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border: 1.5px solid var(--dark-green);
-    /* Add a subtle border */
     border-radius: 6px;
-    /* Optional: Add rounded corners */
 }
 
 .submit-comment:hover {
@@ -390,160 +381,3 @@ form {
     background-color: var(--dark-green);
     border: 1.5px solid var(--light-green);
 }
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-/*.thin {
-    font-weight: 300;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
-}
-
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #445261;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-
-
-/*.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-} */
-
-/*.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup,
-.btn-edit {
-    background-color: #188181;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-delete {
-    color: #fff;
-    background: #E84610;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
-.faded {
-    color: rgb(172, 175, 175);
-}
-
-.approval {
-    color: rgb(222, 146, 168);
-}*/
