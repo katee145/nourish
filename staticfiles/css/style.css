@@ -40,19 +40,22 @@ h2 {
     margin-bottom: 1rem;
 }
 
-nav a {
-    color: var(--dark-green);
+.navbar .nav-link {
+    color: var(--dark-green) !important; /* Override Bootstrap's default color */
+    font-weight: 350;
+    font-family: var(--body-font);
 }
+
+.navbar .nav-link.active {
+    font-weight: 480;
+}
+
 
 .nourish-nav {
     font-family: var(--heading-font);
     text-transform: uppercase;
     font-size: 1.6rem;
     color: var(--dark-green)
-}
-
-.login-notice {
-    margin-bottom: 1rem;
 }
 
 .login-text {
@@ -146,7 +149,13 @@ footer a:hover {
 .search-form {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .search-bar {
@@ -186,6 +195,17 @@ footer a:hover {
     background-color: var(--dark-green);
     color: var(--off-white);
 }
+
+.no-results {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--dark-green);
+  }
+
+.bold {
+    font-weight: 700;
+}
+  
 
 .homepage-image {
     border-radius: 10px;
@@ -305,7 +325,17 @@ form {
     background: var(--highlight-red);
 }
 
+.btn-confirm {
+    color: var(--off-white);
+    background: var(--highlight-red);
+}
+
 .btn-edit {
+    color: var(--dark-green);
+    background: var(--highlight-yellow);
+}
+
+.btn-close-modal {
     color: var(--dark-green);
     background: var(--highlight-yellow);
 }
@@ -323,6 +353,14 @@ form {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+}
+
+.btn-close-modal:hover {
+    color: var(--off-white);
+}
+
+.btn-confirm:hover {
+    color: var(--dark-green);
 }
 
 .btn-edit:hover {
