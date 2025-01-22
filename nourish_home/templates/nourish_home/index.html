@@ -9,7 +9,7 @@
       <div class="search-bar">
         <!-- Label hidden but available for screen readers -->
         <label for="search" class="visually-hidden">Search for recipes</label>
-        <input required type="text" name="search" placeholder="Search for recipes..." value="{{ request.GET.search }}"
+        <input id="search" required type="text" name="search" placeholder="Search for recipes..." value="{{ request.GET.search }}"
           class="search-input" list="suggestions" onfocus="this.value='';">
         <button type="submit" class="search-button" aria-label="Search button for search bar">
           <i class="fas fa-search"></i>
