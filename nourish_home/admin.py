@@ -16,11 +16,11 @@ post_migrate.connect(create_predefined_categories, sender=apps.get_app_config('n
 
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status')
-    search_fields = ['title', 'content']
+    list_display = ('title', 'author', 'slug', 'status')
+    search_fields = ['title', 'ingredients', 'description', 'instructions']
     list_filter = ('status',)
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('content',)
+    summernote_fields = ('description')
     filter_horizontal = ('categories',)
 
 @admin.register(Category)
