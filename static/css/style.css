@@ -134,6 +134,17 @@ footer a:hover {
 
 /* index.html search function */
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }  
+
 .search-form {
     display: flex;
     justify-content: center;
@@ -276,6 +287,11 @@ footer a:hover {
 /* RECIPE_DETAIL.HTML */
 
 /* recipe_detail.html formatting */
+
+.recipe-title {
+    font-weight: 250;
+    font-size: 2.5rem;
+}
 
 .recipe-page-image {
     border-radius: 10px;

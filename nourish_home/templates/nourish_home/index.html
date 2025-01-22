@@ -4,11 +4,13 @@
 
 <!-- Search bar -->
 <section>
+  <!-- Title hidden but available for screen readers -->
+  <h2 class="visually-hidden">Search Recipes</h2>
   <div class="container search-container">
-    <form method="get" action="" class="search-form">
+    <form method="get" action="." class="search-form">
       <div class="search-bar">
         <input required type="text" name="search" placeholder="Search for recipes..." value="{{ request.GET.search }}"
-          class="search-input" list="suggestions" onfocus="this.value='';" />
+          class="search-input" list="suggestions" onfocus="this.value='';">
         <button type="submit" class="search-button">
           <i class="fas fa-search"></i>
         </button>

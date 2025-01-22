@@ -16,7 +16,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8 col-md-12 mb-3">
                 <div class="title-section">
-                    <h1 class="post-title">{{ recipe.title }}</h1>
+                    <h2 class="recipe-title">{{ recipe.title }}</h2>
                     <p class="category-list">{% for category in recipe.categories.all %}
                         {{ category.name }}{% if not forloop.last %} | {% endif %}
                         {% endfor %}</p>
