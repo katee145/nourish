@@ -49,6 +49,7 @@
                     <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                         aria-label="Go to home page" href="{% url 'home' %}">Home</a>
                 </li>
+                <!-- Nav bar shows different options depending on login status -->
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
@@ -72,10 +73,11 @@
 
 <body class="d-flex flex-column h-100 main-bg min-vh-100">
 
-    <!-- displaying Django messages -->
+    <!-- Displaying Django messages -->
     <div class="container alert">
         <div class="row">
             <div class="col-md-8 offset-md-2">
+                <!-- Message displayed varies depending on the action -->
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}
@@ -91,6 +93,7 @@
         <!--User login notice-->
         <aside>
             <div class="login-notice flex-shrink-0 main-bg">
+                <!-- Tells user whether they are logged in or not -->
                 {% if user.is_authenticated %}
                 <p class="text-start login-text">You are logged in as <span class="username">{{ user }}</span></p>
                 {% else %}

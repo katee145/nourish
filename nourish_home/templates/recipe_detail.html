@@ -5,6 +5,7 @@
 
 <article>
     <!-- Title and Recipe Details -->
+    <!-- Inserts unique recipe details -->
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 col-md-12 mb-3">
@@ -24,6 +25,7 @@
             <!-- Image Section -->
             <div class="col-lg-4 col-md-12">
                 <div class="image-section">
+                    <!-- Inserts chosen imaage with a placeholder set incase of no image -->
                     {% if "placeholder" in recipe.featured_image.url %}
                     <img src="{% static 'images/placeholder.jpg' %}" class="w-100 recipe-page-image"
                         alt="placeholder image">
@@ -66,6 +68,7 @@
                 <h3 class="comment-title">Comments:</h3>
                 <div>
                     {% for comment in comments %}
+                    <!-- Displays comments if there are any -->
                     <div
                         class="p-2 comments{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
                         <div class="published-comment">
@@ -79,11 +82,7 @@
                                 {{ comment.body | linebreaks }}
                             </div>
                         </div>
-                        {% if not comment.approved and comment.author == user %}
-                        <p class="approval">
-                            This comment is awaiting approval
-                        </p>
-                        {% endif %}
+                        <!-- Logged in user can edit and delete their comment if it has been approved they made it -->
                         <div id="comment-buttons">
                             {% if user.is_authenticated and comment.author == user %}
                             <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
@@ -99,6 +98,7 @@
         </div>
 
         <!-- Comment Form -->
+        <!-- Allows logged in users to comment or encourages login -->
         <div class="col-md-4">
             <div class="comment-form">
                 {% if user.is_authenticated %}

@@ -36,6 +36,7 @@
 <!-- Recipe Entries -->
 <section>
   <div class="col-12 mt-3 left">
+    <!-- Iterates through all recipes -->
     {% if object_list %}
     <div class="row">
       {% for recipe in object_list %}
@@ -74,6 +75,7 @@
       {% endfor %}
     </div>
     {% else %}
+    <!-- Displays when search query returns no recipes -->
     <div class="no-results m-4">
       <p class="bold">Oops...we don't have anything that matches that.</p>
       <p>Why not try searching for one of these? Vegan, Gluten-free, Meat, Fish, Budget eats, Under 30 mins...</p>
@@ -81,7 +83,7 @@
     {% endif %}
   </div>
 
-  <!--Next and previous buttons-->
+  <!-- Next and previous buttons that only display when relevant -->
   {% if is_paginated %}
   <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
