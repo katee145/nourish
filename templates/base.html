@@ -21,7 +21,7 @@
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="{% static 'images/nourish-logo.webp' %}">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -35,43 +35,43 @@
 
 </head>
 
-<!-- Navigation -->
-<nav id="base-nav" class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"><span class="nourish-nav">Nourish</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                        aria-label="Go to home page" href="{% url 'home' %}">Home</a>
-                </li>
-                <!-- Nav bar shows different options depending on login status -->
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_logout' %}" aria-label="Go to logout page">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_signup' %}" aria-label="Go to registration page">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_login' %}" aria-label="Go to login page">Login</a>
-                </li>
-                {% endif %}
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <body class="d-flex flex-column h-100 main-bg min-vh-100">
+
+    <!-- Navigation -->
+    <nav id="base-nav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="nourish-nav">Nourish</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            aria-label="Go to home page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <!-- Nav bar shows different options depending on login status -->
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_logout' %}" aria-label="Go to logout page">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}" aria-label="Go to registration page">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_login' %}" aria-label="Go to login page">Login</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Displaying Django messages -->
     <div class="container alert">
