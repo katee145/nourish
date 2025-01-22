@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block title %}
+    | {{ recipe.title }} 
+{% endblock %}
+
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
