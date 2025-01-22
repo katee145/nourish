@@ -69,7 +69,7 @@ body {
 .alert {
     color: var(--highlight-red);
     font-family: var(--body-font);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     padding: 0;
     text-transform: uppercase;
@@ -375,6 +375,12 @@ form {
     padding: 0.5rem 1rem;
     border: 1.5px solid var(--dark-green);
     border-radius: 6px;
+}
+
+.submit-comment:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green);
+    border: 1.5px solid var(--light-green);
 }
 
 /* LOGIN/LOGOUT/SIGNUP.HTML */
