@@ -325,7 +325,17 @@ form {
     background: var(--highlight-red);
 }
 
+.btn-confirm {
+    color: var(--off-white);
+    background: var(--highlight-red);
+}
+
 .btn-edit {
+    color: var(--dark-green);
+    background: var(--highlight-yellow);
+}
+
+.btn-close-modal {
     color: var(--dark-green);
     background: var(--highlight-yellow);
 }
@@ -343,6 +353,14 @@ form {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+}
+
+.btn-close-modal:hover {
+    color: var(--off-white);
+}
+
+.btn-confirm:hover {
+    color: var(--dark-green);
 }
 
 .btn-edit:hover {
