@@ -25,6 +25,6 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)  # This should be 'list_display'
+    list_display = ('name',)
 
 admin.site.register(Comment)

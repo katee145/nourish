@@ -43,28 +43,6 @@ class Recipe(models.Model):
         return self.title
 
 
-
-class Ingredient(models.Model):
-    """
-    Model representing a recipe ingredient.
-    """
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="ingredient_set")  # Changed related_name here
-    name = models.CharField(max_length=255)
-    quantity = models.CharField(max_length=50, blank=True)
-    unit = models.CharField(max_length=50, blank=True)
-
-    def __str__(self):
-        return f"{self.quantity} {self.unit} {self.name}"
-
-
-class RecipeCategory(models.Model):
-    """
-    Many-to-many relationship between Recipe and Category.
-    """
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
-
-
 class Comment(models.Model):
     """
     Model for comments.
@@ -82,5 +60,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
-
-
