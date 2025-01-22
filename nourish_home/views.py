@@ -10,14 +10,20 @@ from django.db.models import Q
 
 # Create your views here.
 class RecipeList(generic.ListView):
+    """
+    Displays a list of recipes with pagination.
+    """
     model = Recipe
     template_name = "nourish_home/index.html" 
     paginate_by = 8
 
     def get_queryset(self):
+        """
+        Refines recipe list based on search.
+        """
         queryset = super().get_queryset()
-        category_slug = self.request.GET.get('category')  # Filtering by category
-        search_query = self.request.GET.get('search') # Search
+        category_slug = self.request.GET.get('category') 
+        search_query = self.request.GET.get('search')
         if category_slug:
             queryset = queryset.filter(categories__name=category_slug)
         # Search Query Logic. 
@@ -39,9 +45,12 @@ class RecipeList(generic.ListView):
 
 class RecipeDetailView(View):
     """
-    Display an individual :model:Recipe with comments and a form to add a comment.
+    Display an individual recipe with comments and a form to add a comment.
     """
     def get(self, request, slug, *args, **kwargs):
+        """
+        Retrieves the recipe, approved comments, and comment form.
+        """
         recipe = get_object_or_404(Recipe, slug=slug, status=1)
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         comment_form = CommentForm()
@@ -59,6 +68,9 @@ class RecipeDetailView(View):
         })
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Handles comment submission.
+        """
         recipe = get_object_or_404(Recipe, slug=slug, status=1)
         if request.method == "POST":
             comment_form = CommentForm(data=request.POST)
@@ -82,7 +94,6 @@ def comment_edit(request, slug, comment_id):
     """
     View to edit comments
     """
-    # Step 1: Corrected recipe retrieval before usage
     recipe = get_object_or_404(Recipe, slug=slug, status=1)
     comment = get_object_or_404(Comment, pk=comment_id)
     comment_form = CommentForm(data=request.POST, instance=comment)
@@ -91,7 +102,6 @@ def comment_edit(request, slug, comment_id):
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.recipe = recipe
-            #comment.approved = False
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
