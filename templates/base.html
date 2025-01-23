@@ -73,6 +73,18 @@
         </div>
     </nav>
 
+    <!--User login notice-->
+    <aside>
+        <div class="login-notice flex-shrink-0 main-bg">
+            <!-- Tells user whether they are logged in or not -->
+            {% if user.is_authenticated %}
+            <p class="text-start login-text">You are logged in as <span class="username">{{ user }}</span></p>
+            {% else %}
+            <p class="text-start login-text">You are not logged in</p>
+            {% endif %}
+        </div>
+    </aside>
+
     <!-- Displaying Django messages -->
     <div class="container alert">
         <div class="row">
@@ -90,21 +102,9 @@
 
     <main class="flex-grow-1">
 
-        <!--User login notice-->
-        <aside>
-            <div class="login-notice flex-shrink-0 main-bg">
-                <!-- Tells user whether they are logged in or not -->
-                {% if user.is_authenticated %}
-                <p class="text-start login-text">You are logged in as <span class="username">{{ user }}</span></p>
-                {% else %}
-                <p class="text-start login-text">You are not logged in</p>
-                {% endif %}
+        {% block content %}
 
-                {% block content %}
-
-                {% endblock content %}
-            </div>
-        </aside>
+        {% endblock content %}
 
     </main>
 
