@@ -67,18 +67,25 @@ body {
 }
 
 .alert {
-    color: var(--highlight-red);
-    font-family: var(--body-font);
+    border-radius: 0.25rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border: 1.9px solid var(--dark-green);
+    background-color: var(--off-white);
+}
+
+.alert p {
+    margin-bottom: 0;
     font-size: 1rem;
-    font-weight: 700;
-    padding: 0;
-    text-transform: uppercase;
+    font-weight: 515;
+    color: var(--dark-green);
 }
 
 .login-text {
     font-family: var(--body-font);
-    font-weight: 500;
-    color: var(--highlight-red);
+    font-weight: 450;
+    color: var(--dark-green);
     margin-left: 12px;
     font-style: italic;
 }
