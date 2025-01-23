@@ -56,10 +56,16 @@ class RecipeDetailView(View):
         comment_form = CommentForm()
 
         # Process ingredients and instructions
-        ingredients =
-        recipe.ingredients.splitlines() if recipe.ingredients else []
-        instructions =
-        recipe.instructions.splitlines() if recipe.instructions else []
+        ingredients = (
+            recipe.ingredients.splitlines()
+            if recipe.ingredients
+            else []
+        )
+        instructions = (
+            recipe.instructions.splitlines()
+            if recipe.instructions
+            else []
+        )
 
         return render(request, "recipe_detail.html", {
             "recipe": recipe,
