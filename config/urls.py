@@ -1,8 +1,9 @@
-"""
-URL configuration for project.
-"""
 from django.contrib import admin
 from django.urls import path, include
+
+"""
+Defines main URL patterns for project.
+"""
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),

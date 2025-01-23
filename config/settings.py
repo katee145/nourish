@@ -30,10 +30,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['8000-katee145-nourish-63nmef9oa1q.ws.codeinstitute-ide.net', '8000-katee145-nourish-bijdyjccbkj.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-katee145-nourish-63nmef9oa1q.ws.codeinstitute-ide.net',
+    '8000-katee145-nourish-bijdyjccbkj.ws.codeinstitute-ide.net',
+    '.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-katee145-nourish-63nmef9oa1q.ws.codeinstitute-ide.net', 'https://8000-katee145-nourish-bijdyjccbkj.ws.codeinstitute-ide.net', "https://*.codeinstitute-ide.net/",
+    'https://8000-katee145-nourish-63nmef9oa1q.ws.codeinstitute-ide.net',
+    'https://8000-katee145-nourish-bijdyjccbkj.ws.codeinstitute-ide.net',
+    "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
 ]
 
@@ -110,16 +115,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
     },
 ]
 

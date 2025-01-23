@@ -4,17 +4,18 @@ from django.views import View
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 from .models import Recipe, Comment, Category
 from .forms import CommentForm
-from django.db.models import Q
 
-# Create your views here.
+
+# Views below
 class RecipeList(generic.ListView):
     """
     Displays a list of recipes with pagination.
     """
     model = Recipe
-    template_name = "nourish_home/index.html" 
+    template_name = "nourish_home/index.html"
     paginate_by = 8
 
     def get_queryset(self):
@@ -22,18 +23,17 @@ class RecipeList(generic.ListView):
         Refines recipe list based on search.
         """
         queryset = super().get_queryset()
-        category_slug = self.request.GET.get('category') 
+        category_slug = self.request.GET.get('category')
         search_query = self.request.GET.get('search')
         if category_slug:
             queryset = queryset.filter(categories__name=category_slug)
-        # Search Query Logic. 
+        # Search Query Logic.
         if search_query:
             queryset = queryset.filter(
                 Q(title__icontains=search_query) |
                 Q(categories__name__icontains=search_query) |
                 Q(ingredients__icontains=search_query)
             ).distinct()
-
 
         return queryset
 
@@ -56,8 +56,10 @@ class RecipeDetailView(View):
         comment_form = CommentForm()
 
         # Process ingredients and instructions
-        ingredients = recipe.ingredients.splitlines() if recipe.ingredients else []
-        instructions = recipe.instructions.splitlines() if recipe.instructions else []
+        ingredients =
+        recipe.ingredients.splitlines() if recipe.ingredients else []
+        instructions =
+        recipe.instructions.splitlines() if recipe.instructions else []
 
         return render(request, "recipe_detail.html", {
             "recipe": recipe,
@@ -86,9 +88,11 @@ class RecipeDetailView(View):
                 return redirect("recipe_detail", slug=recipe.slug)
         return render(request, "recipe_detail.html", {
             "recipe": recipe,
-            "comments": recipe.comments.filter(approved=True).order_by('created_on'),
+            "comments":
+                recipe.comments.filter(approved=True).order_by('created_on'),
             "comment_form": comment_form,
         })
+
 
 def comment_edit(request, slug, comment_id):
     """
@@ -105,9 +109,11 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
@@ -124,6 +130,7 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
