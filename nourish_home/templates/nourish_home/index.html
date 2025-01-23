@@ -2,6 +2,14 @@
 {% load static %}
 {% block content %}
 
+<!-- Masthead -->
+<section class="masthead">
+  <div class="container masthead-container"> 
+    <h1 class="masthead-title">Nourish</h1>
+    <h2 class="masthead-subheading">Recipes that make you feel good</h2>
+  </div>
+</section>
+
 <!-- Search bar -->
 <section>
   <div class="container search-container">
@@ -9,8 +17,8 @@
       <div class="search-bar">
         <!-- Label hidden but available for screen readers -->
         <label for="search" class="visually-hidden">Search for recipes</label>
-        <input id="search" required type="text" name="search" placeholder="Search for recipes..." value="{{ request.GET.search }}"
-          class="search-input" list="suggestions" onfocus="this.value='';">
+        <input id="search" required type="text" name="search" placeholder="Find your next favourite recipe..."
+          value="{{ request.GET.search }}" class="search-input" list="suggestions" onfocus="this.value='';">
         <button type="submit" class="search-button" aria-label="Search button for search bar">
           <i class="fas fa-search"></i>
         </button>

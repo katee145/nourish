@@ -136,6 +136,27 @@ footer a:hover {
 
 /* INDEX.HTML */
 
+/* index.html masthead */
+
+.masthead {
+    text-align: center;
+}
+
+.masthead-title {
+    font-family: var(--heading-font);
+    font-size: 12vw;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.masthead-subheading {
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--highlight-red);
+    font-weight: 600;
+}
+
 /* index.html search function */
 
 .visually-hidden {
