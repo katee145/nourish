@@ -91,8 +91,8 @@
                         <!-- Logged in user can edit and delete their comment if it has been approved they made it -->
                         <div id="comment-buttons">
                             {% if user.is_authenticated and comment.author == user %}
-                            <button class="btn btn-edit" data-comment_id="{{ comment.id }}" aria-label="Edit">Edit</button>
-                            <button class="btn btn-delete" data-comment_id="{{ comment.id }}" aria-label="Delete">Delete</button>
+                            <button class="btn btn-edit" data_comment_id="{{ comment.id }}" aria-label="Edit">Edit</button>
+                            <button class="btn btn-delete" data_comment_id="{{ comment.id }}" aria-label="Delete">Delete</button>
                             {% endif %}
                         </div>
                     </div>
