@@ -36,12 +36,15 @@ h2 {
 
 .navbar .nav-link {
     color: var(--dark-green) !important;
-    /* Override Bootstrap's default color */
     font-weight: 350;
     font-family: var(--body-font);
 }
 
-.navbar .nav-link.active {
+.nav-link:hover {
+    font-weight: 500;
+}
+
+.navbar .nav-link .active {
     font-weight: 480;
 }
 

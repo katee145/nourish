@@ -41,7 +41,7 @@ h2 {
 }
 
 .nav-link:hover {
-    font-style: italic;
+    font-weight: 500;
 }
 
 .navbar .nav-link .active {
@@ -427,35 +427,8 @@ form {
     border: 1.5px solid var(--light-green);
 }
 
-/* LOGIN/LOGOUT/SIGNUP.HTML */
-
-.btn-signup {
-    color: var(--dark-green);
-    background-color: var(--light-green);
-    font-family: var(--body-font);
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1.5px solid var(--dark-green);
-    border-radius: 6px;
-}
-
-.btn-signup:hover {
-    color: var(--off-white);
-    background-color: var(--dark-green);
-    border: 1.5px solid var(--light-green);
-}
-
-.link {
-    color: var(--dark-green);
-}
-
-.link:hover {
-    color: var(--highlight-red);
-}
-
 /* ABOUT.HTML */
+/* Media query for formatting at the end of sheet */
 
 .about {
     margin-bottom: 0;
@@ -464,6 +437,8 @@ form {
 .about-page-image {
     border-radius: 10px;
 }
+
+/* about.html meet the team */
 
 .team-title {
     margin-bottom: 2rem;
@@ -490,6 +465,34 @@ form {
 
 .team-info {
     max-width: 650px;
+}
+
+/* LOGIN/LOGOUT/SIGNUP.HTML */
+
+.btn-signup {
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--dark-green);
+    border-radius: 6px;
+}
+
+.btn-signup:hover {
+    color: var(--off-white);
+    background-color: var(--dark-green);
+    border: 1.5px solid var(--light-green);
+}
+
+.link {
+    color: var(--dark-green);
+}
+
+.link:hover {
+    color: var(--highlight-red);
 }
 
 /* MEDIA QUERY */
