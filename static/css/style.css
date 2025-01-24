@@ -97,6 +97,7 @@ body {
 
 footer {
     background-color: var(--dark-green);
+    margin-top: 1.5rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
