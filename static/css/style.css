@@ -101,6 +101,7 @@ footer {
     align-items: center;
     bottom: 0;
     width: 100%;
+    /* Media query for social media icons at the end of sheet */
 }
 
 footer a {
@@ -145,7 +146,7 @@ footer a:hover {
 .masthead-title {
     font-family: var(--heading-font);
     text-transform: uppercase;
-    font-size: 200px;
+    /* Media query for font size at the end of sheet */
 }
 
 .masthead-subheading {
@@ -153,7 +154,7 @@ footer a:hover {
     font-style: italic;
     color: var(--highlight-red);
     font-weight: 600;
-    font-size: 32px;
+    /* Media query for font size at the end of sheet */
 }
 
 /* index.html search function */
@@ -461,7 +462,7 @@ form {
 }
 
 /* Adjust masthead font size across screen sizes*/
-@media (max-width: 1679px) {
+@media (min-width: 1200px) {
     .masthead-title {
         font-size: 200px;
     }

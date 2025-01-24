@@ -136,6 +136,24 @@ footer a:hover {
 
 /* INDEX.HTML */
 
+/* index.html masthead */
+
+.masthead {
+    text-align: center;
+}
+
+.masthead-title {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+}
+
+.masthead-subheading {
+    font-family: var(--body-font);
+    font-style: italic;
+    color: var(--highlight-red);
+    font-weight: 600;
+}
+
 /* index.html search function */
 
 .visually-hidden {
@@ -437,5 +455,56 @@ form {
 @media (max-width: 767px) {
     .fa-facebook-f {
         padding-left: 0;
+    }
+}
+
+/* Adjust masthead font size across screen sizes*/
+@media (min-width: 1200px) {
+    .masthead-title {
+        font-size: 200px;
+    }
+
+    .masthead-subheading {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .masthead-title {
+        font-size: 150px;
+    }
+
+    .masthead-subheading {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 992px) {
+    .masthead-title {
+        font-size: 100px;
+    }
+
+    .masthead-subheading {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .masthead-title {
+        font-size: 70px;
+    }
+
+    .masthead-subheading {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 400px) {
+    .masthead-title {
+        font-size: 50px;
+    }
+
+    .masthead-subheading {
+        font-size: 16px;
     }
 }
