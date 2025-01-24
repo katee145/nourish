@@ -155,4 +155,8 @@ def about(request):
     """
     View for the About page.
     """
+    context = {
+        'about_url': reverse('about'),
+    }
+
     return render(request, 'about.html') 

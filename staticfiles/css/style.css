@@ -101,6 +101,7 @@ footer {
     align-items: center;
     bottom: 0;
     width: 100%;
+    /* Media query for social media icons at the end of sheet */
 }
 
 footer a {
@@ -145,6 +146,7 @@ footer a:hover {
 .masthead-title {
     font-family: var(--heading-font);
     text-transform: uppercase;
+    /* Media query for font size at the end of sheet */
 }
 
 .masthead-subheading {
@@ -152,6 +154,7 @@ footer a:hover {
     font-style: italic;
     color: var(--highlight-red);
     font-weight: 600;
+    /* Media query for font size at the end of sheet */
 }
 
 /* index.html search function */
@@ -449,6 +452,43 @@ form {
     color: var(--highlight-red);
 }
 
+/* ABOUT.HTML */
+
+.about {
+    margin-bottom: 0;
+}
+
+.about-page-image {
+    border-radius: 10px;
+}
+
+.team-title {
+    margin-bottom: 2rem;
+}
+
+.meet-team {
+    padding: 0;
+}
+
+.team-member {
+    padding-bottom: 2vh;
+}
+
+.team-name {
+    font-size: 20px;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-info {
+    max-width: 650px;
+}
+
 /* MEDIA QUERY */
 
 /* Aligns footer icons to the left on small screens */
@@ -506,5 +546,37 @@ form {
 
     .masthead-subheading {
         font-size: 16px;
+    }
+}
+
+/* Adjust about.html for smaller screens */
+
+@media (max-width: 500px) {
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-photo {
+        margin-bottom: 15px;
+        /* Adds space between the image and text */
+    }
+
+    .team-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-page-image {
+        max-width: 300px;
+        margin-bottom: 2rem;
+    }
+
+    .image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
