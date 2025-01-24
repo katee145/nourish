@@ -140,3 +140,12 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+def handler404(request, exception):
+    """
+    Custom 404 error handler.
+
+    This view will be used for all 404 errors.
+    """
+    return render(request, '404.html', status=404)

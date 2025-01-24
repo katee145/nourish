@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="no-results m-4">
+    <h1 class="p-3">Page Not Found (404)</h1>
+    <p class="bold">Oops...Looks like you've stumbled upon a page that doesn't exist.</p>
+    <p>You can head back to our <a class="link" href="{% url 'home' %}" aria-label="Go to homepage">homepage</a> to
+        explore our delicious recipes.
+</div>
+{% endblock %}

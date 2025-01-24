@@ -18,3 +18,7 @@ urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view(),
          name='login'),
 ]
+
+
+# Register the custom 404 handler (corrected syntax)
+handler404 = 'nourish_home.views.handler404'  # Replace 'nourish_home' with your app's name
