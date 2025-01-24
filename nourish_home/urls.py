@@ -8,6 +8,7 @@ Defines URL patterns for nourish_home.
 
 urlpatterns = [
     path('', views.RecipeList.as_view(), name='home'),
+    path('about/', views.about, name='about'),
     path('<slug:slug>/', views.RecipeDetailView.as_view(),
          name='recipe_detail'),
     path('<slug:slug>/edit_comment/<int:comment_id>',

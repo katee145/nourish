@@ -149,3 +149,10 @@ def handler404(request, exception):
     This view will be used for all 404 errors.
     """
     return render(request, '404.html', status=404)
+
+
+def about(request):
+    """
+    View for the About page.
+    """
+    return render(request, 'about.html') 
