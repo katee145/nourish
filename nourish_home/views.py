@@ -159,4 +159,4 @@ def about(request):
         'about_url': reverse('about'),
     }
 
-    return render(request, 'about.html') 
+    return render(request, 'about.html')
