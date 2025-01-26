@@ -13,6 +13,8 @@
 <!-- Search bar -->
 <section>
   <div class="container search-container">
+    <!-- Heading hidden but available for screen readers -->
+    <h2 class="visually-hidden">Search Bar</h2>
     <form method="get" action="." class="search-form">
       <div class="search-bar">
         <!-- Label hidden but available for screen readers -->
@@ -87,8 +89,9 @@
     {% else %}
     <!-- Displays when search query returns no recipes -->
     <div class="no-results m-4">
-      <p class="bold">Oops...We don't have anything that matches that.</p>
-      <p>Why not try searching for one of these? Vegan, Gluten-free, Meat, Fish, Budget eats, Under 30 mins...</p>
+      <h2 class="p-3">Oops...</h2>
+      <p>We don't have anything that matches that.</p>
+      <p id="no-results-p">Why not try searching for one of these? Vegan, Gluten-free, Meat, Fish, Budget eats, Under 30 mins...</p>
     </div>
     {% endif %}
   </div>

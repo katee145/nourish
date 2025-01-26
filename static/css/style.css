@@ -229,6 +229,10 @@ footer a:hover {
     color: var(--dark-green);
 }
 
+#no-results-p {
+    padding-bottom: 30px;
+}
+
 .bold {
     font-weight: 700;
 }
