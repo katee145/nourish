@@ -12,7 +12,7 @@ Nourish is an attractive and user-friendly web application built to share and di
 * Version Control: Git & GitHub
 * AI Integration: Exploring the potential of AI tools in the development process.
 
-<a href="..." target="_blank">View the live project here.</a>
+<a href="https://nourish-recipes-0c552fcf97d0.herokuapp.com/" target="_blank">View the live project here.</a>
 
 ## UX Design
 
@@ -34,6 +34,10 @@ The full user stories for this project as well as their acceptance criteria and 
 * As a user looking for useful recipes, I want to be able to view detailed recipe information so that I can easily follow the instructions and understand the ingredients.
 * As someone who has used a recipe, I want to be able to contribute to the recipe website by submitting my comments as feedback after making a recipe.
 
+### Access Control
+
+### User Flow Diagram
+
 ### Wireframes
 
 ...
@@ -48,11 +52,11 @@ The full user stories for this project as well as their acceptance criteria and 
 
 #### Fonts
 
-This project used 'Gasoek One' as the heading font and 'Open Sans' as the body font. Both of these fonts are available via Google Fonts and there is a backup of 'sans-serif' applied on the site.
+This project used 'Bowlby One' as the heading font and 'Open Sans' as the body font. Both of these fonts are available via Google Fonts and there is a backup of 'sans-serif' applied on the site.
 
 #### Colour Palette
 
-The colour palette for Nourish was carefully selected to align with the brand's purpose as a healthy-option recipe site. The colours ensure a user-friendly experience with both attractiveness and meeting accessibility standards.
+The colour palette for Nourish was carefully selected to align with the brand's purpose as a recipe site. The colours ensure a user-friendly experience with both attractiveness and meeting accessibility standards.
 
 ![Nourish colour palette](assets/images/nourish-colour-palette.png)
 
@@ -66,6 +70,10 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 ...
 
 ![Website on multiple device sizes](assets/images...)
+
+## Agile
+
+## Data Model/ERD
 
 ## Features
 ### Existing Features
@@ -123,7 +131,7 @@ The colour palette for Nourish was carefully selected to align with the brand's 
   - Sensitive data is stored in environment variables.
   - DEBUG mode is disabled in the production environment to enhance security.
 
-<a href="..." target="_blank">View the live project here.</a>
+<a href="https://nourish-recipes-0c552fcf97d0.herokuapp.com/" target="_blank">View the live project here.</a>
 
 ## Testing
 
@@ -131,11 +139,18 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 
 ### Manual Testing
 
-...
+#### Test Table
+
+#### Test Scope
 
 ### Validator Testing
 
-...
+<details><summary>Images</summary>
+
+![...]
+</details>
+
+<br>
 
 ![HTML testing](assets/images)
 
@@ -148,6 +163,8 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 ...
 
 ![JS testing](assets/images)
+
+### Python Testing
 
 ### Lighthouse
 
