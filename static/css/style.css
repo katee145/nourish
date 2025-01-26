@@ -371,7 +371,7 @@ form {
     margin-bottom: 1rem;
 }
 
-#comment-buttons {
+.comment-buttons {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
