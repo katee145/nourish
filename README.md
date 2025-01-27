@@ -129,7 +129,7 @@ To achieve this, the layout adapts seamlessly to different screen sizes using a 
 
 The development of the Nourish project followed Agile methodology, focusing on iterative improvements, flexibility, and user-centered design. The project was broken down into 'must have', 'should have' and 'could have' functionality to determine which features would deliver a functional minimum viable product (MVP).
 
-A GitHub Project Board was used to effectively plan, track, and manage tasks, with cards representing user stories, acceptance criteria, and sub-tasks. The board utilised the columns 'Backlog', 'To Do', 'In Progress', and 'Done' to provide a clear visual representation of progress throughout the project.
+A <a href="https://github.com/users/katee145/projects/13" target="_blank">GitHub Project Board</a> was used to effectively plan, track, and manage tasks, with cards representing user stories, acceptance criteria, and sub-tasks. The board utilised the columns 'Backlog', 'To Do', 'In Progress', and 'Done' to provide a clear visual representation of progress throughout the project.
 
 Regular reviews and retrospectives were conducted throughout to evaluate progress and prioritise next tasks to deliver the site within the allotted time frame.
 
@@ -487,11 +487,10 @@ Risk of being able to post an empty comment
 </details>
 
 <details><summary>Register</summary>
-Contains errors from allauth base
+The HTML validation errors on the registration page are a result of using allauth.
 
 ![HTML testing](assets/images/register.html%20logged%20out.png)
 </details>
-
 
 #### CSS
 <details><summary>CSS Validation</summary>
@@ -506,6 +505,7 @@ Contains errors from allauth base
 
 #### JavaScript
 <details><summary>JSHint</summary>
+The undefined variable is a result of using Bootstrap library.
 
 ![JS testing](assets/images/js-hint-nourish.png)
 </details>
@@ -648,54 +648,59 @@ Contains errors from allauth base
 </details>
 
 #### WAVE Accessibility
-Redundant links were flagged
 <details><summary>Homepage</summary>
 
 ![WAVE testing](assets/images/home%20wave%20logged-out.png)
 </details>
 
-<details><summary>About page</summary>
+<details><summary>About</summary>
 
 ![WAVE testing](assets/images/about%20wave%20%20logged-out.png)
 </details>
 
-<details><summary>Recipe page</summary>
+<details><summary>Recipe</summary>
 
 ![WAVE testing](assets/images/recipe%20wave%20logged%20in%20comments.png)
 </details>
 
-<details><summary>No search results page</summary>
+<details><summary>No search results</summary>
 
 ![WAVE testing](assets/images/search%20wave%20logged-out.png)
 </details>
 
-<details><summary>404 page</summary>
+<details><summary>404</summary>
 
 ![WAVE testing](assets/images/404%20wave%20logged-out.png)
 </details>
 
-<details><summary>Logout page</summary>
+<details><summary>Logout</summary>
 
 ![WAVE testing](assets/images/logout%20wave%20logged%20in.png)
 </details>
 
-<details><summary>Login page</summary>
+<details><summary>Login</summary>
 
 ![WAVE testing](assets/images/login%20wave%20logged-out.png)
 </details>
 
-<details><summary>Register page</summary>
+<details><summary>Register</summary>
 
 ![WAVE testing](assets/images/register%20wave%20logged-out.png)
 </details>
 
 ## Credits
 ### Code
-* ...
+
+* The GitHub project was built using the Code Institute template to start.
+* The Code Institute's 'Codestar' was used for the site's foundational code, CRUD functionality, comment model, and general inspiration of blog functionality.
 
 ### Content
-* ...
+* AI
 
 ### Media
-* ...
+* Canva
+* Unsplash
 
+## Acknowledgements
+
+A huge thank you to the Code Institute staff team for their support throughout, in particular Dillon, Roo, and John.
