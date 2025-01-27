@@ -44,10 +44,35 @@ The full user stories for this project as well as their acceptance criteria and 
 
 ...
 
-#### Mobile
-![Wireframe of mobile view](assets/images)
-#### Desktop
-![Wireframe of desktop view](assets/images)
+<details><summary>Homepage</summary>
+
+![Wireframe](assets/images/homepage-wireframes-mobile.png)
+![Wireframe](assets/images/homepage-wireframes-desktop.png)
+</details>
+
+<details><summary>About</summary>
+
+![Wireframe](assets/images/about-wireframes-mobile.png)
+![Wireframe](assets/images/about-wireframes-desktop.png)
+</details>
+
+<details><summary>Recipe</summary>
+
+![Wireframe](assets/images/recipe-wireframes-mobile.png)
+![Wireframe](assets/images/recipe-wireframes-desktop.png)
+</details>
+
+<details><summary>Errors</summary>
+
+![Wireframe](assets/images/errors-wireframes--mobile.png)
+![Wireframe](assets/images/errors-wireframes-desktop.png)
+</details>
+
+<details><summary>Account</summary>
+
+![Wireframe](assets/images/account-wireframes-mobile.png)
+![Wireframe](assets/images/account-wireframes-desktop.png)
+</details>
 
 ### Branding
 ![Branding slide for nourish](assets/images/branding-nourish.png)
@@ -268,12 +293,45 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 
 #### Test Scope
 
-<details><summary>Homepage</summary>
+Manual testing was carried out on the website to ensure full functionality. I have focused on specifically the ability to comment then edit and delete your own comment, and the risk. The following was identified as the potential risks given the scope of the site. 
+
+#### Risk testing
+
+The following were identified as risks:
+<details><summary>Regisering with a username that is already taken</summary>
+
+![Risk testing](assets/images/sign-up-validation-4.png)
+</details>
+
+<details><summary>Registering with an insecure password</summary>
+
+![Risk testing](assets/images/sign-up-validation-4.png)
+</details>
+
+<details><summary>Unauthorised users accessing admin panel</summary></summary>
+
+![Risk testing](assets/images/admin-access.png)
+</details>
+
+<details><summary>Unauthorised users accessing user permissions</summary>
+
+![Risk testing](assets/images/staff-admin-access.png)
+
+<details><summary>Risk of being able to edit delete other peoples comments</summary>
+
+![Risk testing](assets/images/user-edit-comment-2.png)
+</details>
+
+#### Comment functionality
+The journey of wanting to comment, creating an account, to commenting then editng and deleting
+Risk of being able to comment not logged in
+Risk of being able to post an empty comment
+<details><summary>Homepage</summary> 
 
 ![Risk testing](assets/images/home.html%20logged%20out.png)
 </details>
 
-#### Comment Testing
+
 
 ### External Testing and Validation
 
