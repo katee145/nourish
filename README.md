@@ -35,7 +35,18 @@ The full user stories for this project as well as their acceptance criteria and 
 * As someone who has used a recipe, I want to be able to contribute to the recipe website by submitting my comments as feedback after making a recipe.
 
 ### Access Control
-#### Test Table
+
+| Access                            | Superuser | Staff user | Signed in user | Signed out user |
+|-----------------------------------|-----------|------------|----------------|-----------------|
+| Can view comments on a recipe     | Y         | Y          | Y              | Y               |
+| Can comment on a recipe           | Y         | Y          | Y              | N               |
+| Can edit their own comment on a recipe | Y     | Y          | Y              | N               |
+| Can delete their own comment on a recipe | Y     | Y          | Y              | N               |
+| Can log in to the admin panel     | Y         | Y          | N              | N               |
+| Can manage users in admin panel   | Y         | N          | N              | N               |
+| Can manage posts in admin panel   | Y         | Y          | N              | N               |
+| Can manage comments in admin panel| Y         | Y          | N              | N               |
+
 
 ### User Flow Diagram
 ![User flow diagram](assets/images/user-flow-diagram-nourish.png)
@@ -238,9 +249,9 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 
 ### Future Changes
 
-...
-
-* ...
+* Flagging inappropriate comments
+* Notification that you comment has been approved 
+* Save recipesand have a profile 
 
 ## Built With
 
@@ -290,6 +301,16 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 ...
 
 ### Manual Testing
+
+| Browser          | Functioning? (Y/N) | Responsive? (Y/N) |
+|------------------|--------------------|-------------------|
+| Google Chrome    | Y                  | Y                 |
+| Safari           | Y                  | Y                 |
+| Bing             | Y                  | Y                 |
+| Microsoft Edge   | Y                  | Y                 |
+| Firefox Mozilla  | Y                  | Y                 |
+| Opera GX         | Y                  | Y                 |
+
 
 #### Test Scope
 
