@@ -6,11 +6,12 @@
 Nourish is an attractive and user-friendly web application built to share and discover delicious recipes. The site allows authorised users to log in and publish recipes to Nourish, and allows site visitors to browse recipes for that all-too-needed meal inspo. This Full Stack Individual Capstone Project marks the culmination of everything learnt while studying at the Code Institute. Nourish combines and demonstrates:
 
 * Frontend Development: HTML, CSS, JavaScript
-* Backend Development: Django web framework
-* Database Management: Django
+* Backend Development: Python, Django framework
+* Database Management: PostgreSQL, integrated through Django ORM
 * Agile Methodology: Project planning and tracking using Agile principles
 * Version Control: Git & GitHub
-* AI Integration: Exploring the potential of AI tools in the development process.
+* Deployment: Heroku
+* AI Integration: Harnessing AI tools in the development process.
 
 <a href="https://nourish-recipes-0c552fcf97d0.herokuapp.com/" target="_blank">View the live project here.</a>
 
@@ -18,13 +19,13 @@ Nourish is an attractive and user-friendly web application built to share and di
 
 ### Site Owner’s Goal
 
-The site owner's goal is to build a user-friendly online platform that inspires and excites users to try new recipes from a range of creators. Nourish will foster a sense of community through user interactions, such as recipe reviews and feedback, to create a site that users will want to keep coming back to.
+The Nourish site owner's goal is to create a user-friendly online platform that inspires users to explore the joy of cooking and discover new recipes for every occasion. Nourish aims to be more than just a recipe collection—it will foster a sense of community by enabling users to connect, share feedback, leave reviews, and swap cooking tips.
 
-Whilst Nourish provides users with a curated collection of delicious recipes, the site will also foster a sense of community through user interactions, such as recipe reviews and feedback. Nourish will use HTML, CSS, JavaScript, and Python to create a site that users will want to keep coming back to.
+The site will be built using HTML, CSS, JavaScript, Python, and the Django framework to create a site that users will want to keep coming back to. It will focus on fostering connections between food enthusiasts while showcasing the site’s core values: sharing good food and great ideas.
 
 ### User Stories
 
-The full user stories for this project as well as their acceptance criteria and tasks can be found in the <a href="https://github.com/users/katee145/projects/13" target="_blank">project board</a>. Below are the user-stories that were considered essential to making the minimum viable product:
+The full user stories for this project, along with their acceptance criteria and tasks, can be found on the <a href="https://github.com/users/katee145/projects/13" target="_blank">project board</a>. Below are the user stories deemed essential to achieving the minimum viable product (MVP):
 
 * As a site visitor, I want to be able to access the recipe website on multiple devices (desktop, mobile, tablet) so that I can use it anytime, anywhere.
 * As a recipe website administrator, I want to be able to easily add, edit, and delete recipes so that I can keep the content fresh and up-to-date.
@@ -35,6 +36,8 @@ The full user stories for this project as well as their acceptance criteria and 
 * As someone who has used a recipe, I want to be able to contribute to the recipe website by submitting my comments as feedback after making a recipe.
 
 ### Access Control
+
+The table below outlines access control for each user type, covering both the site’s front end and admin panel:
 
 | Access                            | Superuser | Staff user | Signed in user | Signed out user |
 |-----------------------------------|-----------|------------|----------------|-----------------|
@@ -49,11 +52,40 @@ The full user stories for this project as well as their acceptance criteria and 
 
 
 ### User Flow Diagram
+
+The user flow diagram illustrates how unauthorised (non-staff) users navigate the site. For simplicity, it assumes the user begins by deciding whether they have an account. In practice, many users will land directly on a specific recipe page they are searching for.
+
 ![User flow diagram](assets/images/user-flow-diagram-nourish.png)
 
-### Wireframes
+### Branding
+![Branding slide for nourish](assets/images/branding-nourish.png)
 
-...
+#### Fonts
+
+This project uses 'Bowlby One' for headings and 'Open Sans' for body text. Both fonts are sourced from Google Fonts and there is a backup of 'sans-serif' applied on the site.
+
+#### Colour Palette
+
+The colour palette for Nourish was carefully selected to align with the brand's purpose as a recipe site. The colours ensure a user-friendly experience, balancing attractiveness with accessibility standards.
+
+<details><summary>View colour palette</summary>
+
+![Nourish colour palette](assets/images/colour-palette-nourish.png)
+</details>
+
+#### Imagery
+
+All photography used on the Nourish site, including recipe images and staff photos, was sourced from Unsplash, ensuring high-quality visuals that align with the site’s aesthetic.
+
+The brand logo was designed using Canva, carefully crafted to complement the site’s overall branding and color palette, reinforcing a cohesive and appealing identity.
+
+<details><summary>View logo</summary>
+
+![Nourish logo](assets/images/logo-nourish.png)
+</details>
+
+### Wireframes
+The wireframes for the Nourish site were created using Canva to visually map out the layout and design for both mobile and desktop screens. These wireframes served as a foundational guide for the site’s development, ensuring a consistent and user-friendly interface across devices.
 
 <details><summary>Homepage</summary>
 
@@ -85,33 +117,24 @@ The full user stories for this project as well as their acceptance criteria and 
 ![Wireframe](assets/images/account-wireframes-desktop.png)
 </details>
 
-### Branding
-![Branding slide for nourish](assets/images/branding-nourish.png)
-
-#### Fonts
-
-This project used 'Bowlby One' as the heading font and 'Open Sans' as the body font. Both of these fonts are available via Google Fonts and there is a backup of 'sans-serif' applied on the site.
-
-#### Colour Palette
-
-The colour palette for Nourish was carefully selected to align with the brand's purpose as a recipe site. The colours ensure a user-friendly experience with both attractiveness and meeting accessibility standards.
-
-![Nourish colour palette](assets/images/colour-palette-nourish.png)
-
-#### Imagery
-
-...
-![Nourish logo](assets/images/logo-nourish.png)
-
 ### Responsiveness
 
-...
+Nourish is designed to be fully responsive across all device sizes, ensuring an optimal user experience whether accessed on mobile, tablet, or desktop. The design follows a mobile-first approach, based on the hypothesis that the majority of users browse recipes on their smartphones.
+
+To achieve this, the layout adapts seamlessly to different screen sizes using a combination of Bootstrap's grid system and Flexbox, applied strategically to maintain consistency and usability across devices.
 
 ![Website on multiple device sizes](assets/images/responsiveness-nourish.png)
 
 ## Agile
 
-## Data Model/ERD
+The development of the Nourish project followed Agile methodology, focusing on iterative improvements, flexibility, and user-centered design. The project was broken down into 'must have', 'should have' and 'could have' functionality to determine which features would deliver a functional minimum viable product (MVP).
+
+A GitHub Project Board was used to effectively plan, track, and manage tasks, with cards representing user stories, acceptance criteria, and sub-tasks. The board utilised the columns 'Backlog', 'To Do', 'In Progress', and 'Done' to provide a clear visual representation of progress throughout the project.
+
+Regular reviews and retrospectives were conducted throughout to evaluate progress and prioritise next tasks to deliver the site within the allotted time frame.
+
+## Entity Relationship Diagram
+The Entity Relationship Diagram (ERD) below outlines the relationships between the site's models.
 
 ![Entity relationship diagram](assets/images/erd--nourish.png)
 
@@ -270,7 +293,7 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 - **Debugging:** 
   - ...
 
-- **Performance and UX Optimization:** 
+- **Performance and UX Optimisation:** 
   - ...
 
 - **Automated Unit Testing:**
