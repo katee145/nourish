@@ -316,22 +316,93 @@ The following were identified as risks:
 <details><summary>Unauthorised users accessing user permissions</summary>
 
 ![Risk testing](assets/images/staff-admin-access.png)
+</details>
 
 <details><summary>Risk of being able to edit delete other peoples comments</summary>
 
 ![Risk testing](assets/images/user-edit-comment-2.png)
 </details>
 
+<details><summary>Risk of being able to submit and/or edit an empty comment</summary>
+
+![Risk testing](assets/images/empty-comment-1.png)
+![Risk testing](assets/images/edit-empty-comment.png)
+</details>
+
 #### Comment functionality
 The journey of wanting to comment, creating an account, to commenting then editng and deleting
 Risk of being able to comment not logged in
 Risk of being able to post an empty comment
-<details><summary>Homepage</summary> 
 
-![Risk testing](assets/images/home.html%20logged%20out.png)
+<details><summary>User is not signed into an account so cannot submit a comment on a recipe</summary> 
+
+![Comment testing](assets/images/comment-test-0.png)
 </details>
 
+<details><summary>User is able to create an account when: they have a unique username, they have a secure password, they have entered the same password, all required fields are complete</summary> 
 
+![Comment testing](assets/images/comment-test-1.png)
+</details>
+
+<details><summary>User is notified of their login</summary> 
+
+![Comment testing](assets/images/comment-test-2.png)
+</details>
+
+<details><summary>User can submit a comment on a recipe</summary> 
+
+![Comment testing](assets/images/comment-test-3.png)
+</details>
+
+<details><summary>User is notified that their comment is awaiting approval</summary> 
+
+![Comment testing](assets/images/comment-test-4.png)
+</details>
+
+<details><summary>Admin can view new user account</summary> 
+
+![Comment testing](assets/images/comment-test-5.png)
+</details>
+
+<details><summary>User has no admin permissions</summary> 
+
+![Comment testing](assets/images/comment-test-6.png)
+</details>
+
+<details><summary>Admin and staff can approve user's comment</summary> 
+
+![Comment testing](assets/images/comment-test-7.png)
+</details>
+
+<details><summary>User can view and edit comment once approved</summary> 
+
+![Comment testing](assets/images/comment-test-8.png)
+</details>
+
+<details><summary>User is notified that their comment has been updated</summary> 
+
+![Comment testing](assets/images/comment-test-9.png)
+</details>
+
+<details><summary>User can delete their comment</summary> 
+
+![Comment testing](assets/images/comment-test-10.png)
+</details>
+
+<details><summary>User is notified that their comment has been deleted</summary> 
+
+![Comment testing](assets/images/comment-test-11.png)
+</details>
+
+<details><summary>User's comment has been deleted</summary> 
+
+![Comment testing](assets/images/comment-test-12.png)
+</details>
+
+<details><summary>Admin can delete user's account</summary> 
+
+![Comment testing](assets/images/comment-test-13.png)
+</details>
 
 ### External Testing and Validation
 
