@@ -47,53 +47,58 @@
 
 <!-- Recipe Entries -->
 <section>
-  <div class="col-12 mt-3 left">
-    <!-- Iterates through all recipes -->
-    {% if object_list %}
-    <div class="row">
-      {% for recipe in object_list %}
-      <div class="col-lg-3 col-sm-6">
-        <div class="card mb-4">
-          <a href="{% url 'recipe_detail' recipe.slug %}" aria-label="Link to recipe">
-            <div class="card-body">
-              <div class="image-container">
-                {% if "placeholder" in recipe.featured_image.url %}
-                <img class="card-img-top homepage-image" src="{% static 'images/placeholder.jpg' %}"
-                  alt="placeholder image">
-                {% else %}
-                <img class="card-img-top homepage-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
-                {% endif %}
+  <div class="container-fluid">
+    <div class="col-12 mt-3 left">
+      <!-- Iterates through all recipes -->
+      {% if object_list %}
+      <div class="row">
+        {% for recipe in object_list %}
+        <div class="col-lg-3 col-sm-6">
+          <div class="card mb-4">
+            <a href="{% url 'recipe_detail' recipe.slug %}" aria-label="Link to recipe">
+              <div class="card-body">
+                <div class="image-container">
+                  {% if "placeholder" in recipe.featured_image.url %}
+                  <img class="card-img-top homepage-image" src="{% static 'images/placeholder.jpg' %}"
+                    alt="placeholder image">
+                  {% else %}
+                  <img class="card-img-top homepage-image" src="{{ recipe.featured_image.url }}"
+                    alt="{{ recipe.title }}">
+                  {% endif %}
+                </div>
               </div>
+            </a>
+            <div class="card-body">
+              <h2 class="card-title">
+                <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link"
+                  aria-label="Link to recipe">
+                  {{ recipe.title }}
+                </a>
+              </h2>
+              <p class="category-list-home">
+                {% for category in recipe.categories.all %}
+                {{ category.name }}{% if not forloop.last %} | {% endif %}
+                {% endfor %}
+              </p>
             </div>
-          </a>
-          <div class="card-body">
-            <h2 class="card-title">
-              <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link post-link" aria-label="Link to recipe">
-                {{ recipe.title }}
-              </a>
-            </h2>
-            <p class="category-list-home">
-              {% for category in recipe.categories.all %}
-              {{ category.name }}{% if not forloop.last %} | {% endif %}
-              {% endfor %}
-            </p>
           </div>
         </div>
+        {% if forloop.counter|divisibleby:4 %}
       </div>
-      {% if forloop.counter|divisibleby:4 %}
-    </div>
-    <div class="row">
+      <div class="row">
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% else %}
+      <!-- Displays when search query returns no recipes -->
+      <div class="no-results m-4">
+        <h2 class="p-3">Oops...</h2>
+        <p>We don't have anything that matches that.</p>
+        <p id="no-results-p">Why not try searching for one of these? Vegan, Gluten-free, Meat, Fish, Budget eats, Under
+          30 mins...</p>
+      </div>
       {% endif %}
-      {% endfor %}
     </div>
-    {% else %}
-    <!-- Displays when search query returns no recipes -->
-    <div class="no-results m-4">
-      <h2 class="p-3">Oops...</h2>
-      <p>We don't have anything that matches that.</p>
-      <p id="no-results-p">Why not try searching for one of these? Vegan, Gluten-free, Meat, Fish, Budget eats, Under 30 mins...</p>
-    </div>
-    {% endif %}
   </div>
 
   <!-- Next and previous buttons that only display when relevant -->
