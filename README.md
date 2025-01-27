@@ -1,5 +1,5 @@
 # Nourish
-![Nourish header](assets/images/nourish-header-image.png)
+![Nourish header](assets/images/header-nourish.png)
 
 ## Introduction 
 
@@ -35,8 +35,10 @@ The full user stories for this project as well as their acceptance criteria and 
 * As someone who has used a recipe, I want to be able to contribute to the recipe website by submitting my comments as feedback after making a recipe.
 
 ### Access Control
+#### Test Table
 
 ### User Flow Diagram
+![User flow diagram](assets/images/user-flow-diagram-nourish.png)
 
 ### Wireframes
 
@@ -48,7 +50,7 @@ The full user stories for this project as well as their acceptance criteria and 
 ![Wireframe of desktop view](assets/images)
 
 ### Branding
-![Branding slide for nourish](assets/images/nourish-branding-slide.png)
+![Branding slide for nourish](assets/images/branding-nourish.png)
 
 #### Fonts
 
@@ -58,31 +60,156 @@ This project used 'Bowlby One' as the heading font and 'Open Sans' as the body f
 
 The colour palette for Nourish was carefully selected to align with the brand's purpose as a recipe site. The colours ensure a user-friendly experience with both attractiveness and meeting accessibility standards.
 
-![Nourish colour palette](assets/images/nourish-colour-palette.png)
+![Nourish colour palette](assets/images/colour-palette-nourish.png)
 
 #### Imagery
 
 ...
-![Images used](assets/images...)
+![Nourish logo](assets/images/logo-nourish.png)
 
 ### Responsiveness
 
 ...
 
-![Website on multiple device sizes](assets/images...)
+![Website on multiple device sizes](assets/images/responsiveness-nourish.png)
 
 ## Agile
 
 ## Data Model/ERD
 
+![Entity relationship diagram](assets/images/erd--nourish.png)
+
 ## Features
 ### Existing Features
 
-#### ...
+#### Navigation
 
 ...
 
-![...](assets/images...)
+<details><summary>View</summary>
+
+![Navigation bar](assets/images/navbar.png)
+</details>
+
+#### Login Notice
+
+...
+
+<details><summary>View</summary>
+
+![Login notice](assets/images/login-notice-1.png)
+![Login notice](assets/images/login-notice-2.png)
+</details>
+
+#### Masthead
+
+...
+
+<details><summary>View</summary>
+
+![Masthead](assets/images/masthead.png)
+</details>
+
+#### Search
+
+...
+
+<details><summary>View</summary>
+
+![Search bar](assets/images/searchbar.png)
+![No search results](assets/images/no-search-results.png)
+</details>
+
+#### Recipe Cards
+
+...
+
+<details><summary>View</summary>
+
+![Recipe cards](assets/images/recipe-cards.png)
+</details>
+
+#### Navigation buttons
+
+...
+
+<details><summary>View</summary>
+
+![Navigation buttons](assets/images/prev-next-buttons.png)
+</details>
+
+#### Recipe
+
+...
+
+<details><summary>View</summary>
+
+![Recipe page](assets/images/recipe.png)
+</details>
+
+#### Comments
+
+...
+
+<details><summary>View</summary>
+
+![Comments](assets/images/comments.png)
+![Comments](assets/images/comments-2.png)
+</details>
+
+#### Notification
+
+...
+
+<details><summary>View</summary>
+
+![Notification](assets/images/notification.png)
+</details>
+
+#### About
+
+...
+
+<details><summary>View</summary>
+
+![About](assets/images/about.png)
+</details>
+
+#### 404
+
+...
+
+<details><summary>View</summary>
+
+![404](assets/images/404.png)
+</details>
+
+#### Login
+
+...
+
+<details><summary>View</summary>
+
+![Login](assets/images/signin.png)
+</details>
+
+#### Logout
+
+...
+
+<details><summary>View</summary>
+
+![Logout](assets/images/signout.png)
+</details>
+
+#### Register
+
+...
+
+<details><summary>View</summary>
+
+![Register](assets/images/signup.png)
+</details>
 
 ### Future Changes
 
@@ -139,38 +266,255 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 
 ### Manual Testing
 
-#### Test Table
-
 #### Test Scope
 
-### Validator Testing
+<details><summary>Homepage</summary>
 
-<details><summary>Images</summary>
-
-![...]
+![Risk testing](assets/images/home.html%20logged%20out.png)
 </details>
 
-<br>
+#### Comment Testing
 
-![HTML testing](assets/images)
+### External Testing and Validation
 
-...
+#### HTML
+<details><summary>Homepage</summary>
 
-![CSS testing](assets/images)
+![HTML testing](assets/images/home.html%20logged%20out.png)
+</details>
 
-### JavaScript Testing
+<details><summary>About</summary>
 
-...
+![HTML testing](assets/images/about.html%20logged-out.png)
+</details>
 
-![JS testing](assets/images)
+<details><summary>Recipe</summary>
 
-### Python Testing
+![HTML testing](assets/images/recipe.html%20loggedin%20with%20comments.png)
+</details>
 
-### Lighthouse
+<details><summary>No search results</summary>
 
-...
+![HTML testing](assets/images/search.html%20logged%20out.png)
+</details>
 
-![Lighthouse testing desktop](assets/images)
+<details><summary>404</summary>
+
+![HTML testing](assets/images/404.html%20logged%20out.png)
+</details>
+
+<details><summary>Logout</summary>
+
+![HTML testing](assets/images/logout.html%20logged%20in.png)
+</details>
+
+<details><summary>Login</summary>
+
+![HTML testing](assets/images/login.html%20logged-out.png)
+</details>
+
+<details><summary>Register</summary>
+Contains errors from allauth base
+
+![HTML testing](assets/images/register.html%20logged%20out.png)
+</details>
+
+
+#### CSS
+<details><summary>CSS Validation</summary>
+
+![CSS testing](assets/images/css-validation-nourish.png)
+</details>
+
+<details><summary>CSS Warnings</summary>
+
+![CSS warning](assets/images/css-warnings-nourish.png)
+</details>
+
+#### JavaScript
+<details><summary>JSHint</summary>
+
+![JS testing](assets/images/js-hint-nourish.png)
+</details>
+
+#### Python
+<details><summary>admin.py</summary>
+
+![Python testing](assets/images/admin.py.png)
+</details>
+
+<details><summary>apps.py</summary>
+
+![Python testing](assets/images/apps.py.png)
+</details>
+
+<details><summary>asgi.py</summary>
+
+![Python testing](assets/images/asgi.py.png)
+</details>
+
+<details><summary>forms.py</summary>
+
+![Python testing](assets/images/forms.py.png)
+</details>
+
+<details><summary>models.py</summary>
+
+![Python testing](assets/images/models.py.png)
+</details>
+
+<details><summary>settings.py</summary>
+
+![Python testing](assets/images/settings.py.png)
+</details>
+
+<details><summary>tests.py</summary>
+
+![Python testing](assets/images/tests.py.png)
+</details>
+
+<details><summary>config/urls.py</summary>
+
+![Python testing](assets/images/config%20urls.py.png)
+</details>
+
+<details><summary>nourish_home/urls.py</summary>
+
+![Python testing](assets/images/nourish_home%20urls.py.png)
+</details>
+
+<details><summary>views.py</summary>
+
+![Python testing](assets/images/views.py.png)
+</details>
+
+<details><summary>wsgi.py</summary>
+
+![Python testing](assets/images/wsgi.py.png)
+</details>
+
+#### Lighthouse
+<details><summary>Homepage: Desktop</summary>
+
+![Lighthouse testing](assets/images/home%20lighthouse%20desktop.png)
+</details>
+
+<details><summary>Homepage: Mobile</summary>
+
+![Lighthouse testing](assets/images/home%20lighthouse%20mobile.png)
+</details>
+
+<details><summary>About: Desktop</summary>
+
+![Lighthouse testing](assets/images/about%20lighthouse%20desktop.png)
+</details>
+
+<details><summary>About: Mobile</summary>
+
+![Lighthouse testing](assets/images/about%20lighthouse%20mobile.png)
+</details>
+
+<details><summary>Recipe: Desktop</summary>
+
+![Lighthouse testing](assets/images/recipe%20lighthouse%20desktop%20logged%20in.png)
+</details>
+
+<details><summary>Recipe: Mobile</summary>
+
+![Lighthouse testing](assets/images/recipe%20lighthouse%20mobile%20logged%20in.png)
+</details>
+
+<details><summary>No search results: Desktop</summary>
+
+![Lighthouse testing](assets/images/search%20lighthouse%20desktop.png)
+</details>
+
+<details><summary>No search results: Mobile</summary>
+
+![Lighthouse testing](assets/images/search%20lighthouse%20mobile.png)
+</details>
+
+<details><summary>404: Desktop</summary>
+
+![Lighthouse testing](assets/images/404%20lighthouse%20desktop.png)
+</details>
+
+<details><summary>404: Mobile</summary>
+
+![Lighthouse testing](assets/images/404%20lighthouse%20mobile.png)
+</details>
+
+<details><summary>Logout: Desktop</summary>
+
+![Lighthouse testing](assets/images/signout-lighthouse-desktop.png)
+</details>
+
+<details><summary>Logout: Mobile</summary>
+
+![Lighthouse testing](assets/images/signout-lighthouse-mobile.png)
+</details>
+
+<details><summary>Login: Desktop</summary>
+
+![Lighthouse testing](assets/images/signin%20lighthouse%20desktop.png)
+</details>
+
+<details><summary>Login: Mobile</summary>
+
+![Lighthouse testing](assets/images/signin%20lighthouse%20mobile.png)
+</details>
+
+<details><summary>Register: Desktop</summary>
+
+![Lighthouse testing](assets/images/signup%20lighthouse%20desktop.png)
+</details>
+
+<details><summary>Register: Mobile</summary>
+
+![Lighthouse testing](assets/images/signup%20lighthouse%20mobile.png)
+</details>
+
+#### WAVE Accessibility
+Redundant links were flagged
+<details><summary>Homepage</summary>
+
+![WAVE testing](assets/images/home%20wave%20logged-out.png)
+</details>
+
+<details><summary>About page</summary>
+
+![WAVE testing](assets/images/about%20wave%20%20logged-out.png)
+</details>
+
+<details><summary>Recipe page</summary>
+
+![WAVE testing](assets/images/recipe%20wave%20logged%20in%20comments.png)
+</details>
+
+<details><summary>No search results page</summary>
+
+![WAVE testing](assets/images/search%20wave%20logged-out.png)
+</details>
+
+<details><summary>404 page</summary>
+
+![WAVE testing](assets/images/404%20wave%20logged-out.png)
+</details>
+
+<details><summary>Logout page</summary>
+
+![WAVE testing](assets/images/logout%20wave%20logged%20in.png)
+</details>
+
+<details><summary>Login page</summary>
+
+![WAVE testing](assets/images/login%20wave%20logged-out.png)
+</details>
+
+<details><summary>Register page</summary>
+
+![WAVE testing](assets/images/register%20wave%20logged-out.png)
+</details>
 
 ## Credits
 ### Code
@@ -182,4 +526,3 @@ The colour palette for Nourish was carefully selected to align with the brand's 
 ### Media
 * ...
 
-![Nourish end card](assets/images)
