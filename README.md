@@ -42,6 +42,7 @@ The full user stories for this project, along with their acceptance criteria and
 
 The table below outlines access control for each user type, covering both the site’s front end and admin panel.
 
+<details><summary>View</summary>
 
 | Access                            | Superuser | Staff user | Signed in user | Signed out user |
 |-----------------------------------|-----------|------------|----------------|-----------------|
@@ -53,6 +54,7 @@ The table below outlines access control for each user type, covering both the si
 | Can manage users in admin panel   | Y         | N          | N              | N               |
 | Can manage posts in admin panel   | Y         | Y          | N              | N               |
 | Can manage comments in admin panel| Y         | Y          | N              | N               |
+</details>
 
 ### User Flow Diagram
 
