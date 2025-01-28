@@ -25,7 +25,9 @@ The site will be built using HTML, CSS, JavaScript, Python, and the Django frame
 
 ### User Stories
 
-The full user stories for this project, along with their acceptance criteria and tasks, can be found on the <a href="https://github.com/users/katee145/projects/13" target="_blank">project board</a>. Below are the user stories deemed essential to achieving the minimum viable product (MVP):
+The full user stories for this project, along with their acceptance criteria and tasks, can be found on the <a href="https://github.com/users/katee145/projects/13" target="_blank">project board</a>. Below are the user stories deemed essential to achieving the minimum viable product (MVP).
+
+<details><summary>View</summary>
 
 * As a site visitor, I want to be able to access the recipe website on multiple devices (desktop, mobile, tablet) so that I can use it anytime, anywhere.
 * As a recipe website administrator, I want to be able to easily add, edit, and delete recipes so that I can keep the content fresh and up-to-date.
@@ -34,10 +36,13 @@ The full user stories for this project, along with their acceptance criteria and
 * As a user with dietary restrictions, I want to be able to filter recipes so that I can easily find recipes that are suitable for my needs.
 * As a user looking for useful recipes, I want to be able to view detailed recipe information so that I can easily follow the instructions and understand the ingredients.
 * As someone who has used a recipe, I want to be able to contribute to the recipe website by submitting my comments as feedback after making a recipe.
+</details>
 
 ### Access Control
 
-The table below outlines access control for each user type, covering both the site’s front end and admin panel:
+The table below outlines access control for each user type, covering both the site’s front end and admin panel.
+
+<details><summary>View</summary>
 
 | Access                            | Superuser | Staff user | Signed in user | Signed out user |
 |-----------------------------------|-----------|------------|----------------|-----------------|
@@ -49,13 +54,16 @@ The table below outlines access control for each user type, covering both the si
 | Can manage users in admin panel   | Y         | N          | N              | N               |
 | Can manage posts in admin panel   | Y         | Y          | N              | N               |
 | Can manage comments in admin panel| Y         | Y          | N              | N               |
-
+</details>
 
 ### User Flow Diagram
 
 The user flow diagram illustrates how unauthorised (non-staff) users navigate the site. For simplicity, it assumes the user begins by deciding whether they have an account. In practice, many users will land directly on a specific recipe page they are searching for.
 
+<details><summary>View</summary>
+
 ![User flow diagram](assets/images/user-flow-diagram-nourish.png)
+</details>
 
 ### Branding
 ![Branding slide for nourish](assets/images/branding-nourish.png)
@@ -336,6 +344,8 @@ The testing focused on the core functionalities of the site, addressing the most
 
 Manual testing was conducted across a variety of widely-used browsers to ensure both full functionality and responsiveness of the site.
 
+<details><summary>View</summary>
+
 | Browser          | Functioning? (Y/N) | Responsive? (Y/N) |
 |------------------|--------------------|-------------------|
 | Google Chrome    | Y                  | Y                 |
@@ -344,6 +354,7 @@ Manual testing was conducted across a variety of widely-used browsers to ensure 
 | Microsoft Edge   | Y                  | Y                 |
 | Firefox Mozilla  | Y                  | Y                 |
 | Opera GX         | Y                  | Y                 |
+</details>
 
 #### Risk Testing
 
@@ -712,4 +723,4 @@ The undefined variable is a result of using Bootstrap library.
 
 ## Acknowledgements
 
-A huge thank you to the Code Institute staff team for their support throughout, in particular Dillon, Roo, and John.
+A huge thank you to the Code Institute staff team for their support throughout.
