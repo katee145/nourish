@@ -68,7 +68,7 @@ This project uses 'Bowlby One' for headings and 'Open Sans' for body text. Both 
 
 The colour palette for Nourish was carefully selected to align with the brand's purpose as a recipe site. The colours ensure a user-friendly experience, balancing attractiveness with accessibility standards.
 
-<details><summary>View colour palette</summary>
+<details><summary>View</summary>
 
 ![Nourish colour palette](assets/images/colour-palette-nourish.png)
 </details>
@@ -79,7 +79,7 @@ All photography used on the Nourish site, including recipe images and staff phot
 
 The brand logo was designed using Canva, carefully crafted to complement the site’s overall branding and color palette, reinforcing a cohesive and appealing identity.
 
-<details><summary>View logo</summary>
+<details><summary>View</summary>
 
 ![Nourish logo](assets/images/logo-nourish.png)
 </details>
@@ -165,7 +165,7 @@ A permanent login notice is displayed below the navigation bar, informing users 
 
 #### Masthead
 
-The masthead displays the Nourish brand name prominently across the screen with the tagline: "Recipes that make you feel good." The font size dynamically adjusts based on screen size to ensure responsiveness.
+The masthead displays the Nourish brand name prominently across the screen with the tagline: "Recipes that make you feel good". The font size dynamically adjusts based on screen size to ensure responsiveness.
 
 <details><summary>View</summary>
 
@@ -281,16 +281,11 @@ The register page allows users to create an account by entering a unique usernam
 - **Seasonal Spotlight**: Highlight recipes with seasonal ingredients on the homepage to encourage users to cook with fresh, in-season produce.
 - **Advanced Search Filters**: Expand search functionality to include additional filters, such as preparation time, cook time, or specific cuisines.
 
-
-## Built With
-
-* ...
-
 ## AI Implementation and Orchestration
 
-### Use Cases and Reflections:
+Throughout this project, AI was an invaluable tool that helped streamline development and complemented the manual steps I took alongside.
 
-...
+### Use Cases and Reflections:
 
 - **Code Creation:** 
   - AI was key in generating recipes, titles, instructions, and names, which sped up the process of building content for the site.
@@ -333,9 +328,13 @@ This process not only improved my technical abilities but also my problem-solvin
 
 ## Testing
 
-...
+### Testing Scope
 
-### Manual Testing
+The testing focused on the core functionalities of the site, addressing the most common risks and ensuring full functionality.
+
+#### Browser Testing
+
+Manual testing was conducted across a variety of widely-used browsers to ensure both full functionality and responsiveness of the site.
 
 | Browser          | Functioning? (Y/N) | Responsive? (Y/N) |
 |------------------|--------------------|-------------------|
@@ -346,14 +345,10 @@ This process not only improved my technical abilities but also my problem-solvin
 | Firefox Mozilla  | Y                  | Y                 |
 | Opera GX         | Y                  | Y                 |
 
+#### Risk Testing
 
-#### Test Scope
+Key risks were identified, including duplicate usernames, insecure passwords, unauthorised admin access, and the ability to post empty comments. Each was subject to manual unit testing to ensure proper security and functionality.
 
-Manual testing was carried out on the website to ensure full functionality. I have focused on specifically the ability to comment then edit and delete your own comment, and the risk. The following was identified as the potential risks given the scope of the site. 
-
-#### Risk testing
-
-The following were identified as risks:
 <details><summary>Regisering with a username that is already taken</summary>
 
 ![Risk testing](assets/images/sign-up-validation-4.png)
@@ -364,7 +359,7 @@ The following were identified as risks:
 ![Risk testing](assets/images/sign-up-validation-4.png)
 </details>
 
-<details><summary>Unauthorised users accessing admin panel</summary></summary>
+<details><summary>Unauthorised users accessing admin panel</summary>
 
 ![Risk testing](assets/images/admin-access.png)
 </details>
@@ -385,10 +380,9 @@ The following were identified as risks:
 ![Risk testing](assets/images/edit-empty-comment.png)
 </details>
 
-#### Comment functionality
-The journey of wanting to comment, creating an account, to commenting then editng and deleting
-Risk of being able to comment not logged in
-Risk of being able to post an empty comment
+#### Comment Functionality
+
+I documented the end-to-end validation of comment CRUD functionality, from account creation to comment submission, editing, and deletion. This ensured that each step worked correctly and was user-friendly.
 
 <details><summary>User is not signed into an account so cannot submit a comment on a recipe</summary> 
 
@@ -461,6 +455,8 @@ Risk of being able to post an empty comment
 </details>
 
 ### External Testing and Validation
+
+The project underwent external testing and validation for HTML, CSS, JavaScript, Python, Lighthouse, and WAVE accessibility. Errors and warnings are explained where applicable.
 
 #### HTML
 <details><summary>Homepage</summary>
