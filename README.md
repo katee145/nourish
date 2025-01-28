@@ -139,11 +139,12 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 ![Entity relationship diagram](assets/images/erd--nourish.png)
 
 ## Features
+
 ### Existing Features
 
 #### Navigation
 
-...
+The navigation bar is present on all pages, featuring the Nourish title on the left, which links to the homepage. The title remains visible even on smaller screen sizes. The rest of the navigation options collapse into a Bootstrap-built dropdown menu. Links to Home and About behave as expected, while the user's login status determines whether they see Register/Login or Logout as options.
 
 <details><summary>View</summary>
 
@@ -152,17 +153,19 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Login Notice
 
-...
+A permanent login notice is displayed below the navigation bar, informing users of their current status. If logged in, the notice displays the username for clarity and personalisation.
 
 <details><summary>View</summary>
 
 ![Login notice](assets/images/login-notice-1.png)
+<br>
+
 ![Login notice](assets/images/login-notice-2.png)
 </details>
 
 #### Masthead
 
-...
+The masthead displays the Nourish brand name prominently across the screen with the tagline: "Recipes that make you feel good." The font size dynamically adjusts based on screen size to ensure responsiveness.
 
 <details><summary>View</summary>
 
@@ -171,7 +174,7 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Search
 
-...
+The search bar is a core feature of the site, allowing users to filter recipes. It provides a dropdown of suggested categories such as vegan, meat, and budget eats, while also supporting keyword searches, including specific ingredients. If no results match, users are shown a page with alternative suggestions. The search bar clears automatically when clicked and prevents empty submissions with validation.
 
 <details><summary>View</summary>
 
@@ -179,18 +182,27 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 ![No search results](assets/images/no-search-results.png)
 </details>
 
+#### Notification
+
+A notification system provides instant feedback at the top of the page (both homepage and recipe page) when a user completes an action, such as logging in, logging out, submitting a comment, editing a comment, or deleting a comment. These notifications ensure that users are aware of successful interactions.
+
+<details><summary>View</summary>
+
+![Notification](assets/images/notification.png)
+</details>
+
 #### Recipe Cards
 
-...
+Recipe cards are displayed on the homepage, showing eight recipes per page. The layout adapts to screen size, varying from four cards per row to one per row on smaller devices. Each card features an image, recipe title, and categories. Hovering over the title or image causes responsive animations, and clicking redirects users to the recipe details page.
 
 <details><summary>View</summary>
 
 ![Recipe cards](assets/images/recipe-cards.png)
 </details>
 
-#### Navigation buttons
+#### Pagination
 
-...
+The homepage features Prev and Next buttons for navigating between pages of recipes. These buttons only appear when applicable—Next is hidden on the last page, and Prev is hidden on the first. Buttons include hover animations for improved user experience.
 
 <details><summary>View</summary>
 
@@ -199,7 +211,7 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Recipe
 
-...
+Each recipe page includes a title, categories, description, preparation time, cook time, servings, image, ingredients, and instructions. Recipes are added via the admin panel which ensures all fields are completed. A placeholder image is provided for recipes without a custom image that displays on both the recipe page and homepage.
 
 <details><summary>View</summary>
 
@@ -208,7 +220,7 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Comments
 
-...
+At the bottom of each recipe page is a fully functional comment section. Users can see all existing comments, along with the author's name and the date and time of submission. If no comments are available, the message "Be the first to comment!" is displayed. Logged-out users are prompted to log in to leave a comment. Logged-in users can submit, edit, or delete their comments. Form validation prevents the submission of empty comments.
 
 <details><summary>View</summary>
 
@@ -216,18 +228,9 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 ![Comments](assets/images/comments-2.png)
 </details>
 
-#### Notification
-
-...
-
-<details><summary>View</summary>
-
-![Notification](assets/images/notification.png)
-</details>
-
 #### About
 
-...
+The About page introduces the site and its purpose. It features the brand logo prominently at the top, followed by a "Meet the Team" section that displays team member photos, names, and bios.
 
 <details><summary>View</summary>
 
@@ -236,7 +239,7 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### 404
 
-...
+If a user navigates to a non-existent page, they are shown a custom 404 error message with a link back to the homepage for easy navigation.
 
 <details><summary>View</summary>
 
@@ -245,7 +248,7 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Login
 
-...
+The login page allows users with existing accounts to sign in using their username and password. Both fields are required, and users are notified if any details are missing or incorrect.
 
 <details><summary>View</summary>
 
@@ -254,7 +257,7 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Logout
 
-...
+The logout page confirms that the user wants to log out by displaying a confirmation button with hover animations for visual feedback.
 
 <details><summary>View</summary>
 
@@ -263,18 +266,21 @@ The Entity Relationship Diagram (ERD) below outlines the relationships between t
 
 #### Register
 
-...
+The register page allows users to create an account by entering a unique username and a strong password. Form validation and allauth integration ensures all required fields are completed correctly, with error messages displayed for any invalid input.
 
 <details><summary>View</summary>
 
 ![Register](assets/images/signup.png)
 </details>
 
-### Future Changes
+### Future Features
 
-* Flagging inappropriate comments
-* Notification that you comment has been approved 
-* Save recipesand have a profile 
+- **Enhanced Comment Moderation**: Add functionality to flag inappropriate edits in comments or require admin approval for comment edits to maintain the integrity of published comments.
+- **Comment Approval Notifications**: Notify users via email or on-site messages when their comments are approved and published.
+- **User Profiles**: Create profile pages for registered users where they can save and manage favorite recipes for easy access.
+- **Seasonal Spotlight**: Highlight recipes with seasonal ingredients on the homepage to encourage users to cook with fresh, in-season produce.
+- **Advanced Search Filters**: Expand search functionality to include additional filters, such as preparation time, cook time, or specific cuisines.
+
 
 ## Built With
 
@@ -689,13 +695,14 @@ The undefined variable is a result of using Bootstrap library.
 </details>
 
 ## Credits
+
 ### Code
 
 * The GitHub project was built using the Code Institute template to start.
 * The Code Institute's 'Codestar' was used for the site's foundational code, CRUD functionality, comment model, and general inspiration of blog functionality.
 
 ### Content
-* AI
+* AI generated
 
 ### Media
 * Canva
