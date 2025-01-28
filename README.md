@@ -472,43 +472,43 @@ The project underwent external testing and validation for HTML, CSS, JavaScript,
 #### HTML
 <details><summary>Homepage</summary>
 
-![HTML testing](assets/images/home.html%20logged%20out.png)
+![HTML testing](assets/images/home-html-logged-out.png)
 </details>
 
 <details><summary>About</summary>
 
-![HTML testing](assets/images/about.html%20logged-out.png)
+![HTML testing](assets/images/about-html-logged-out.png)
 </details>
 
 <details><summary>Recipe</summary>
 
-![HTML testing](assets/images/recipe.html%20loggedin%20with%20comments.png)
+![HTML testing](assets/images/recipe-html-logged-in-with-comments.png)
 </details>
 
 <details><summary>No search results</summary>
 
-![HTML testing](assets/images/search.html%20logged%20out.png)
+![HTML testing](assets/images/search-html-logged-out.png)
 </details>
 
 <details><summary>404</summary>
 
-![HTML testing](assets/images/404.html%20logged%20out.png)
+![HTML testing](assets/images/404-html-logged-out.png)
 </details>
 
 <details><summary>Logout</summary>
 
-![HTML testing](assets/images/logout.html%20logged%20in.png)
+![HTML testing](assets/images/logout-html-logged-in.png)
 </details>
 
 <details><summary>Login</summary>
 
-![HTML testing](assets/images/login.html%20logged-out.png)
+![HTML testing](assets/images/login-html-logged-out.png)
 </details>
 
 <details><summary>Register</summary>
 The HTML validation errors on the registration page are a result of using allauth.
 
-![HTML testing](assets/images/register.html%20logged%20out.png)
+![HTML testing](assets/images/register-html-logged-out.png)
 </details>
 
 #### CSS
@@ -567,12 +567,12 @@ The undefined variable is a result of using Bootstrap library.
 
 <details><summary>config/urls.py</summary>
 
-![Python testing](assets/images/config%20urls.py.png)
+![Python testing](assets/images/config-urls.py.png)
 </details>
 
 <details><summary>nourish_home/urls.py</summary>
 
-![Python testing](assets/images/nourish_home%20urls.py.png)
+![Python testing](assets/images/nourish-home-urls.py.png)
 </details>
 
 <details><summary>views.py</summary>
@@ -588,52 +588,52 @@ The undefined variable is a result of using Bootstrap library.
 #### Lighthouse
 <details><summary>Homepage: Desktop</summary>
 
-![Lighthouse testing](assets/images/home%20lighthouse%20desktop.png)
+![Lighthouse testing](assets/images/home-lighthouse-desktop.png)
 </details>
 
 <details><summary>Homepage: Mobile</summary>
 
-![Lighthouse testing](assets/images/home%20lighthouse%20mobile.png)
+![Lighthouse testing](assets/images/home-lighthouse-mobile.png)
 </details>
 
 <details><summary>About: Desktop</summary>
 
-![Lighthouse testing](assets/images/about%20lighthouse%20desktop.png)
+![Lighthouse testing](assets/images/about-lighthouse-desktop.png)
 </details>
 
 <details><summary>About: Mobile</summary>
 
-![Lighthouse testing](assets/images/about%20lighthouse%20mobile.png)
+![Lighthouse testing](assets/images/about-lighthouse-mobile.png)
 </details>
 
 <details><summary>Recipe: Desktop</summary>
 
-![Lighthouse testing](assets/images/recipe%20lighthouse%20desktop%20logged%20in.png)
+![Lighthouse testing](assets/images/recipe-lighthouse-desktop-logged-in.png)
 </details>
 
 <details><summary>Recipe: Mobile</summary>
 
-![Lighthouse testing](assets/images/recipe%20lighthouse%20mobile%20logged%20in.png)
+![Lighthouse testing](assets/images/recipe-lighthouse-mobile-logged-in.png)
 </details>
 
 <details><summary>No search results: Desktop</summary>
 
-![Lighthouse testing](assets/images/search%20lighthouse%20desktop.png)
+![Lighthouse testing](assets/images/search-lighthouse-desktop.png)
 </details>
 
 <details><summary>No search results: Mobile</summary>
 
-![Lighthouse testing](assets/images/search%20lighthouse%20mobile.png)
+![Lighthouse testing](assets/images/search-lighthouse-mobile.png)
 </details>
 
 <details><summary>404: Desktop</summary>
 
-![Lighthouse testing](assets/images/404%20lighthouse%20desktop.png)
+![Lighthouse testing](assets/images/404-lighthouse-desktop.png)
 </details>
 
 <details><summary>404: Mobile</summary>
 
-![Lighthouse testing](assets/images/404%20lighthouse%20mobile.png)
+![Lighthouse testing](assets/images/404-lighthouse-mobile.png)
 </details>
 
 <details><summary>Logout: Desktop</summary>
@@ -648,63 +648,63 @@ The undefined variable is a result of using Bootstrap library.
 
 <details><summary>Login: Desktop</summary>
 
-![Lighthouse testing](assets/images/signin%20lighthouse%20desktop.png)
+![Lighthouse testing](assets/images/signin-lighthouse-desktop.png)
 </details>
 
 <details><summary>Login: Mobile</summary>
 
-![Lighthouse testing](assets/images/signin%20lighthouse%20mobile.png)
+![Lighthouse testing](assets/images/signin-lighthouse-mobile.png)
 </details>
 
 <details><summary>Register: Desktop</summary>
 
-![Lighthouse testing](assets/images/signup%20lighthouse%20desktop.png)
+![Lighthouse testing](assets/images/signup-lighthouse-desktop.png)
 </details>
 
 <details><summary>Register: Mobile</summary>
 
-![Lighthouse testing](assets/images/signup%20lighthouse%20mobile.png)
+![Lighthouse testing](assets/images/signup-lighthouse-mobile.png)
 </details>
 
 #### WAVE Accessibility
 <details><summary>Homepage</summary>
 
-![WAVE testing](assets/images/home%20wave%20logged-out.png)
+![WAVE testing](assets/images/home-wave-logged-out.png)
 </details>
 
 <details><summary>About</summary>
 
-![WAVE testing](assets/images/about%20wave%20%20logged-out.png)
+![WAVE testing](assets/images/about-wave-logged-out.png)
 </details>
 
 <details><summary>Recipe</summary>
 
-![WAVE testing](assets/images/recipe%20wave%20logged%20in%20comments.png)
+![WAVE testing](assets/images/recipe-wave-logged-in-comments.png)
 </details>
 
 <details><summary>No search results</summary>
 
-![WAVE testing](assets/images/search%20wave%20logged-out.png)
+![WAVE testing](assets/images/search-wave-logged-out.png)
 </details>
 
 <details><summary>404</summary>
 
-![WAVE testing](assets/images/404%20wave%20logged-out.png)
+![WAVE testing](assets/images/404-wave-logged-out.png)
 </details>
 
 <details><summary>Logout</summary>
 
-![WAVE testing](assets/images/logout%20wave%20logged%20in.png)
+![WAVE testing](assets/images/logout-wave-logged-in.png)
 </details>
 
 <details><summary>Login</summary>
 
-![WAVE testing](assets/images/login%20wave%20logged-out.png)
+![WAVE testing](assets/images/login-wave-logged-out.png)
 </details>
 
 <details><summary>Register</summary>
 
-![WAVE testing](assets/images/register%20wave%20logged-out.png)
+![WAVE testing](assets/images/register-wave-logged-out.png)
 </details>
 
 ## Credits
