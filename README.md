@@ -8,10 +8,11 @@ Nourish is an attractive and user-friendly web application built to share and di
 - **Frontend Development**: HTML, CSS, JavaScript
 - **Backend Development**: Python, Django framework
 - **Database Management**: PostgreSQL, integrated through Django ORM
+- **API**: Cloudinary
+- **AI Integration**: Harnessing AI tools in the development process
 - **Agile Methodology**: Project planning and tracking using Agile principles
 - **Version Control**: Git & GitHub
 - **Deployment**: Heroku
-- **AI Integration**: Harnessing AI tools in the development process
 
 <a href="https://nourish-recipes-0c552fcf97d0.herokuapp.com/" target="_blank">View the live project here.</a>
 
