@@ -5,13 +5,13 @@
 
 Nourish is an attractive and user-friendly web application built to share and discover delicious recipes. The site allows authorised users to log in and publish recipes to Nourish, and allows site visitors to browse recipes for that all-too-needed meal inspo. This Full Stack Individual Capstone Project marks the culmination of everything learnt while studying at the Code Institute. Nourish combines and demonstrates:
 
-* Frontend Development: HTML, CSS, JavaScript
-* Backend Development: Python, Django framework
-* Database Management: PostgreSQL, integrated through Django ORM
-* Agile Methodology: Project planning and tracking using Agile principles
-* Version Control: Git & GitHub
-* Deployment: Heroku
-* AI Integration: Harnessing AI tools in the development process.
+- **Frontend Development**: HTML, CSS, JavaScript
+- **Backend Development**: Python, Django framework
+- **Database Management**: PostgreSQL, integrated through Django ORM
+- **Agile Methodology**: Project planning and tracking using Agile principles
+- **Version Control**: Git & GitHub
+- **Deployment**: Heroku
+- **AI Integration**: Harnessing AI tools in the development process
 
 <a href="https://nourish-recipes-0c552fcf97d0.herokuapp.com/" target="_blank">View the live project here.</a>
 
@@ -293,20 +293,26 @@ The register page allows users to create an account by entering a unique usernam
 ...
 
 - **Code Creation:** 
-  - ...
-  - ...
+  - AI was key in generating recipes, titles, instructions, and names, which sped up the process of building content for the site.
+  - Reflection: While AI provided creative outputs, I refined the content to match the tone and goals of the project, ensuring a cohesive user experience.
 
 - **Debugging:** 
-  - ...
+  - AI helped debug issues by analysing warning messages and offering solutions or explanations. By inserting problematic code and describing the issue, the AI provided effective troubleshooting strategies.
+  - Reflection: This iterative debugging process improved my understanding of error-handling and problem-solving, as I had to evaluate and adapt the AI's suggestions to fit the project.
 
 - **Performance and UX Optimisation:** 
-  - ...
+  - AI provided initial suggestions for media queries and breakpoints which I then manually adjusted for a truly responsive design. By testing the site across different devices, I refined the appearance and functionality.
+  - Reflection: While AI contributed to speeding up the process, fine-tuning responsiveness was a manual effort, reinforcing my understanding of CSS and media queries.
 
 - **Automated Unit Testing:**
-  - ...
+  - AI helped to define the test scope that was required for this project. This process identified risks over functionality such as form validation. The test process was then completed manually.
+  - Reflection: AI was valuable in helping me focus on key areas like input validation. This process improved my understanding of testing and the potential of automated testing.
 
 ### Overall Impact:
-...
+
+The use of AI tools in this project greatly improved efficiency, allowing me to focus on higher-level decisions and manual debugging. However, AI was used as a supportive partner rather than a replacement for my skills. Each suggestion was subject to critical evaluation and refined to meet the project’s unique needs.
+
+This process not only improved my technical abilities but also my problem-solving and decision-making skills. The experience emphasised the importance of embracing new technologies as tools to enhance development.
 
 ## Deployment
 
@@ -698,8 +704,8 @@ The undefined variable is a result of using Bootstrap library.
 
 ### Code
 
-* The GitHub project was built using the Code Institute template to start.
-* The Code Institute's 'Codestar' was used for the site's foundational code, CRUD functionality, comment model, and general inspiration of blog functionality.
+* The initial GitHub repository was created using the Code Institute template.
+* The foundational code, including CRUD functionality, the comment model, and general inspiration for the blog-like features, was adapted from Code Institute's 'Codestar' project.
 
 ### Content
 * AI generated
