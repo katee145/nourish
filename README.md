@@ -344,8 +344,6 @@ The testing focused on the core functionalities of the site, addressing the most
 
 Manual testing was conducted across a variety of widely-used browsers to ensure both full functionality and responsiveness of the site.
 
-<details><summary>View</summary>
-
 | Browser          | Functioning? (Y/N) | Responsive? (Y/N) |
 |------------------|--------------------|-------------------|
 | Google Chrome    | Y                  | Y                 |
@@ -354,7 +352,6 @@ Manual testing was conducted across a variety of widely-used browsers to ensure 
 | Microsoft Edge   | Y                  | Y                 |
 | Firefox Mozilla  | Y                  | Y                 |
 | Opera GX         | Y                  | Y                 |
-</details>
 
 #### Risk Testing
 
@@ -430,7 +427,7 @@ I documented the end-to-end validation of comment CRUD functionality, from accou
 ![Comment testing](assets/images/comment-test-6.png)
 </details>
 
-<details><summary>Admin and staff can approve user's comment</summary> 
+<details><summary>Admin can approve user's comment</summary> 
 
 ![Comment testing](assets/images/comment-test-7.png)
 </details>
